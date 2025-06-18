@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotional Gifts - Superfire Lighting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#3B82F6',
+                        neutral: {
+                            light: '#F3F4F6',
+                            DEFAULT: '#9CA3AF',
+                            dark: '#374151'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-neutral-dark bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-20 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="https://picsum.photos/200/80?random=1" alt="Superfire Logo" class="h-10">
+                    </a>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                        <div class="relative group">
+                            <a href="products.html" class="font-medium hover:text-accent transition-colors flex items-center">
+                                Products
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">All Products</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <a href="#" class="font-medium text-accent border-b-2 border-accent pb-1 flex items-center">
+                                B2B Solutions
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
+                                    <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
+                                    <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
+                                    <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
+                    <div class="relative">
+                        <a href="#" class="text-lg hover:text-accent transition-colors">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                        </a>
+                    </div>
+                    <button class="md:hidden text-lg">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow">
+                        Custom Promotional Gifts
+                    </h1>
+                    <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-lg">
+                        High-quality branded lighting products for corporate gifts, marketing campaigns, and promotional events with custom logo and packaging options.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#contact" class="inline-block bg-white text-primary hover:bg-neutral-light px-6 py-3 rounded-md text-sm font-medium transition-custom shadow-lg">
+                            Get Custom Quote
+                        </a>
+                        <a href="#products" class="inline-block bg-transparent border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                            View Gift Ideas
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://via.placeholder.com/600x400" alt="Promotional Gifts" class="rounded-lg shadow-2xl transform rotate-2 hover:rotate-0 transition-custom duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Promotional Gift Services</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">Complete customization solutions to create memorable branded promotional items</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="flex flex-col">
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md mb-6 flex-grow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-certificate text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Logo Printing Services</h3>
+                        <ul class="space-y-3 text-neutral">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>High-resolution digital printing with precise color matching</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Laser engraving for metal surfaces with permanent marking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Pad printing for curved surfaces and complex designs</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Minimum order quantities starting from just 50 units</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Free digital mockups and design proofing</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md flex-grow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-truck text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Express Delivery Options</h3>
+                        <ul class="space-y-3 text-neutral">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Rush production in as little as 3-5 business days</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Global shipping with door-to-door tracking</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Consolidated shipping for international orders</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>White-glove delivery for premium corporate gifts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Event deadline guarantee with on-time delivery promise</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md mb-6 flex-grow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-gift text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Custom Packaging Solutions</h3>
+                        <ul class="space-y-3 text-neutral">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Custom printed gift boxes with company branding</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Eco-friendly packaging options available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Custom inserts and foam padding for premium presentation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Personalized gift cards with custom messages</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Bulk packaging options for corporate events and trade shows</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md flex-grow">
+                        <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-lightbulb-o text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Gift Recommendation Service</h3>
+                        <ul class="space-y-3 text-neutral">
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Expert consultation based on your budget and audience</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Curated gift sets for different occasions and themes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Seasonal promotional items and limited editions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Volume pricing for large corporate orders</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check text-primary mt-1 mr-3"></i>
+                                <span>Complimentary samples for quality evaluation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Recommendations Section -->
+    <section id="products" class="py-16 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Popular Promotional Gifts</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">Our most popular lighting products for corporate gifting and promotional campaigns</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-custom">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x300" alt="Mini Flashlight" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-2 py-1 rounded">
+                            BESTSELLER
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Mini LED Flashlight</h3>
+                        <p class="text-neutral text-sm mb-4">Compact, lightweight flashlight with keychain attachment - perfect for everyday carry.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">$8.99 <span class="text-neutral text-sm font-normal">/unit</span></span>
+                            <a href="#contact" class="text-sm font-medium text-primary hover:text-secondary transition-custom">Customize</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-custom">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x300" alt="USB Power Bank" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Power Bank with LED Light</h3>
+                        <p class="text-neutral text-sm mb-4">5000mAh power bank with integrated LED flashlight and custom branding options.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">$15.99 <span class="text-neutral text-sm font-normal">/unit</span></span>
+                            <a href="#contact" class="text-sm font-medium text-primary hover:text-secondary transition-custom">Customize</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-custom">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x300" alt="LED Keychain" class="w-full h-48 object-cover">
+                        <div class="absolute top-3 right-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">
+                            NEW
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">LED Keychain Light</h3>
+                        <p class="text-neutral text-sm mb-4">Branded keychain with bright LED light and multiple color options for corporate gifts.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">$5.49 <span class="text-neutral text-sm font-normal">/unit</span></span>
+                            <a href="#contact" class="text-sm font-medium text-primary hover:text-secondary transition-custom">Customize</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-custom">
+                    <div class="relative">
+                        <img src="https://via.placeholder.com/400x300" alt="Camping Lantern" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg mb-2">Collapsible LED Lantern</h3>
+                        <p class="text-neutral text-sm mb-4">Rechargeable LED lantern with dimming function - ideal for outdoor promotional events.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">$22.50 <span class="text-neutral text-sm font-normal">/unit</span></span>
+                            <a href="#contact" class="text-sm font-medium text-primary hover:text-secondary transition-custom">Customize</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                    View Full Product Catalog
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Success Stories</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">See how our promotional gifts have helped businesses enhance their brand visibility</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fa fa-building text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Corporate Conference Gift</h3>
+                    </div>
+                    <p class="text-neutral mb-4">A Fortune 500 company ordered 5,000 custom-logo flashlights for their annual conference, resulting in 92% positive feedback from attendees and increased brand recall.</p>
+                    <div class="flex items-center text-sm text-neutral">
+                        <span class="mr-4"><i class="fa fa-calendar mr-1"></i> March 2023</span>
+                        <span><i class="fa fa-users mr-1"></i> 5,000 units</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fa fa-globe text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Global Marketing Campaign</h3>
+                    </div>
+                    <p class="text-neutral mb-4">An international electronics brand used our custom power banks in their global marketing campaign across 12 countries, achieving a 35% increase in social media engagement.</p>
+                    <div class="flex items-center text-sm text-neutral">
+                        <span class="mr-4"><i class="fa fa-calendar mr-1"></i> June 2023</span>
+                        <span><i class="fa fa-globe mr-1"></i> 12 countries</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fa fa-university text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Bank Customer Loyalty Program</h3>
+                    </div>
+                    <p class="text-neutral mb-4">A major bank distributed our branded lanterns as part of their premium customer loyalty program, resulting in a 28% increase in customer retention rates.</p>
+                    <div class="flex items-center text-sm text-neutral">
+                        <span class="mr-4"><i class="fa fa-calendar mr-1"></i> January 2023</span>
+                        <span><i class="fa fa-trophy mr-1"></i> Premium customers</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                            <i class="fa fa-briefcase text-primary text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Trade Show Promotion</h3>
+                    </div>
+                    <p class="text-neutral mb-4">A technology company gave away our custom keychain lights at industry trade shows, generating 40% more leads compared to previous promotional items.</p>
+                    <div class="flex items-center text-sm text-neutral">
+                        <span class="mr-4"><i class="fa fa-calendar mr-1"></i> Q2 2023</span>
+                        <span><i class="fa fa-line-chart mr-1"></i> 40% more leads</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Process Section -->
+    <section class="py-16 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Simple Customization Process</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">From concept to delivery, we make the customization process seamless and efficient</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-2">Choose Products</h3>
+                    <p class="text-neutral">Select from our range of promotional lighting products or request custom recommendations</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-2">Design & Proofing</h3>
+                    <p class="text-neutral">Submit your logo and artwork for digital mockup and approval before production</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-2">Production</h3>
+                    <p class="text-neutral">Our manufacturing team produces your custom promotional items with strict quality control</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-semibold mb-2">Delivery</h3>
+                    <p class="text-neutral">Fast shipping to your location or directly to event venues worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold">Get Your Custom Gift Solution</h2>
+                    <p class="mt-4 text-white/90 text-lg">Our promotional gift specialists will help you create the perfect branded items for your marketing needs.</p>
+
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-paint-brush"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Free Design Service</h3>
+                                <p class="text-white/80 mt-1">Professional design assistance to ensure your logo looks perfect on our products</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Price Match Guarantee</h3>
+                                <p class="text-white/80 mt-1">We'll match any comparable quote for custom promotional items</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Quality Assurance</h3>
+                                <p class="text-white/80 mt-1">Every order includes quality inspection and satisfaction guarantee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="bg-white p-6 rounded-lg shadow-lg text-neutral-dark">
+                        <h3 class="text-xl font-semibold mb-6">Request Gift Customization Quote</h3>
+
+                        <div class="mb-4">
+                            <label for="company" class="block text-sm font-medium text-neutral-dark mb-1">Company Name</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your company name">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="contact-person" class="block text-sm font-medium text-neutral-dark mb-1">Contact Person</label>
+                            <input type="text" id="contact-person" name="contact-person" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-neutral-dark mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your email address">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-medium text-neutral-dark mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your phone number">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="product-interest" class="block text-sm font-medium text-neutral-dark mb-1">Product Interest</label>
+                            <select id="product-interest" name="product-interest" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select product type</option>
+                                <option value="flashlights">Flashlights</option>
+                                <option value="power-banks">Power Banks with LED</option>
+                                <option value="keychains">LED Keychains</option>
+                                <option value="lanterns">LED Lanterns</option>
+                                <option value="other">Other Products</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="quantity" class="block text-sm font-medium text-neutral-dark mb-1">Estimated Quantity</label>
+                            <select id="quantity" name="quantity" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select quantity range</option>
+                                <option value="50-100">50-100 units</option>
+                                <option value="101-500">101-500 units</option>
+                                <option value="501-1000">501-1000 units</option>
+                                <option value="1001+">1001+ units</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="event-date" class="block text-sm font-medium text-neutral-dark mb-1">Event Date (if applicable)</label>
+                            <input type="date" id="event-date" name="event-date" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-neutral-dark mb-1">Additional Requirements</label>
+                            <textarea id="message" name="message" rows="3" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Describe your customization needs"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-md text-sm font-medium transition-custom">
+                            Get Custom Quote
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Superfire</h3>
+                    <p class="text-white/70 text-sm">Leading manufacturer of high-quality lighting products with over 15 years of industry experience.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-white transition-custom">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-custom">Products</a></li>
+                        <li><a href="oem-odm.html" class="hover:text-white transition-custom">OEM/ODM Services</a></li>
+                        <li><a href="wholesale.html" class="hover:text-white transition-custom">Wholesale Program</a></li>
+                        <li><a href="enterprise-solutions.html" class="hover:text-white transition-custom">Enterprise Solutions</a></li>
+                        <li><a href="promotional-gifts.html" class="hover:text-white transition-custom">Promotional Gifts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product Categories</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="#" class="hover:text-white transition-custom">Flashlights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Headlamps</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Work Lights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Bicycle Lights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Camping Lights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-white/70 text-sm">Subscribe to our newsletter for the latest product updates and industry insights.</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 text-sm rounded-l-md focus:outline-none w-full">
+                        <button class="bg-primary hover:bg-primary/90 px-3 py-2 text-sm rounded-r-md transition-custom">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/50 text-sm">© 2023 Superfire. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Privacy Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Terms of Service</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

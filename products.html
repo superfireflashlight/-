@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superfire - Product Listing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#1D3557',
+                        accent: '#457B9D',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors;
+            }
+            .btn-secondary {
+                @apply bg-white text-primary border border-primary px-6 py-3 rounded-md font-medium hover:bg-primary/5 transition-colors;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="https://picsum.photos/200/80?random=1" alt="Superfire Logo" class="h-10">
+                    </a>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                        <div class="relative group">
+                            <a href="products.html" class="font-medium text-accent border-b-2 border-accent pb-1 flex items-center">
+                                Products
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">All Products</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <a href="#" class="font-medium hover:text-accent transition-colors flex items-center">
+                                B2B Solutions
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
+                                    <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
+                                    <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
+                                    <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
+                    <div class="relative">
+                        <a href="#" class="text-lg hover:text-accent transition-colors">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                        </a>
+                    </div>
+                    <button class="md:hidden text-lg">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 bg-secondary text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-4">Our Products</h1>
+            <p class="text-white/80 text-lg max-w-2xl">Explore our complete range of high-quality lighting solutions for professional and personal use.</p>
+        </div>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section class="py-16 bg-neutral/30">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Filter Sidebar -->
+                <div class="lg:w-1/4 bg-white rounded-xl shadow-md p-6">
+                    <h2 class="text-xl font-bold mb-6">Filter Products</h2>
+
+                    <!-- Category Filter -->
+                    <div class="mb-8">
+                        <h3 class="font-bold mb-3">Product Category</h3>
+                        <ul class="space-y-2">
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2" checked> All Products</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Flashlights</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Headlamps</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Lanterns</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Accessories</label></li>
+                        </ul>
+                    </div>
+
+                    <!-- Brightness Filter -->
+                    <div class="mb-8">
+                        <h3 class="font-bold mb-3">Brightness (Lumens)</h3>
+                        <ul class="space-y-2">
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> 0-500 lm</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> 501-1000 lm</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> 1001-2000 lm</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> 2001+ lm</label></li>
+                        </ul>
+                    </div>
+
+                    <!-- Battery Type -->
+                    <div class="mb-8">
+                        <h3 class="font-bold mb-3">Battery Type</h3>
+                        <ul class="space-y-2">
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Rechargeable</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Disposable Batteries</label></li>
+                            <li><label class="flex items-center"><input type="checkbox" class="mr-2"> Solar Powered</label></li>
+                        </ul>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="mb-8">
+                        <h3 class="font-bold mb-3">Price Range</h3>
+                        <div class="px-2">
+                            <input type="range" min="0" max="200" value="100" class="w-full h-2 bg-neutral rounded-lg appearance-none cursor-pointer">
+                            <div class="flex justify-between text-sm mt-2">
+                                <span>$0</span>
+                                <span>$200+</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary w-full">Apply Filters</button>
+                    <button class="text-accent font-medium mt-2 w-full" style="background: none; border: none;">Reset Filters</button>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="lg:w-3/4">
+                    <!-- Sort and View Options -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+                        <div class="text-lg font-medium">Showing 12 Products</div>
+                        <div class="flex gap-4">
+                            <div class="relative">
+                                <select class="appearance-none bg-white border border-gray-300 text-neutral-dark py-2 pl-3 pr-8 rounded-md focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option>Sort by: Featured</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Newest First</option>
+                                    <option>Best Selling</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-neutral-dark">
+                                    <i class="fa fa-chevron-down text-xs"></i>
+                                </div>
+                            </div>
+                            <div class="flex border border-gray-300 rounded-md overflow-hidden">
+                                <button class="bg-accent text-white p-2"><i class="fa fa-th-large"></i></button>
+                                <button class="bg-white text-neutral-dark p-2 hover:bg-neutral"><i class="fa fa-list"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Listing -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Product 1 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://picsum.photos/600/600?random=7" alt="Superfire A2 Rechargeable Flashlight" class="w-full h-full object-cover">
+                                <div class="absolute top-3 right-3 bg-accent text-white text-xs font-bold px-2 py-1 rounded">
+                                    NEW
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2">A2 Rechargeable Flashlight</h3>
+                                <p class="text-sm text-neutral-dark/70 mb-3">Ultra-bright 2000 lumen flashlight with USB-C rechargeable battery</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star-half-o text-yellow-400"></i>
+                                    </div>
+                                    <span class="text-xs text-neutral-dark/70 ml-2">(42 reviews)</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button class="btn-secondary flex-1 text-center">
+                                        Get Quote
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://picsum.photos/600/600?random=8" alt="Superfire H5 Headlamp" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2">H5 Headlamp</h3>
+                                <p class="text-sm text-neutral-dark/70 mb-3">Lightweight 1200 lumen headlamp with adjustable beam and red light mode</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star-o text-yellow-400"></i>
+                                    </div>
+                                    <span class="text-xs text-neutral-dark/70 ml-2">(28 reviews)</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button class="btn-secondary flex-1 text-center">
+                                        Get Quote
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://picsum.photos/600/600?random=9" alt="Superfire T1 Tactical Flashlight" class="w-full h-full object-cover">
+                                <div class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                    BEST SELLER
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2">T1 Tactical Flashlight</h3>
+                                <p class="text-sm text-neutral-dark/70 mb-3">Military-grade 3000 lumen flashlight with strobe and self-defense features</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                    </div>
+                                    <span class="text-xs text-neutral-dark/70 ml-2">(76 reviews)</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button class="btn-secondary flex-1 text-center">
+                                        Get Quote
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://picsum.photos/600/600?random=10" alt="Superfire L3 Lantern" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2">L3 Lantern</h3>
+                                <p class="text-sm text-neutral-dark/70 mb-3">2000 lumen rechargeable lantern with 360° illumination and power bank function</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star-half-o text-yellow-400"></i>
+                                    </div>
+                                    <span class="text-xs text-neutral-dark/70 ml-2">(35 reviews)</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button class="btn-secondary flex-1 text-center">
+                                        Get Quote
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://picsum.photos/600/600?random=11" alt="Superfire C4 LED Flashlight" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2">C4 LED Flashlight</h3>
+                                <p class="text-sm text-neutral-dark/70 mb-3">Compact 1500 lumen flashlight with waterproof design and multiple modes</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star-o text-yellow-400"></i>
+                                    </div>
+                                    <span class="text-xs text-neutral-dark/70 ml-2">(22 reviews)</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button class="btn-secondary flex-1 text-center">
+                                        Get Quote
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                            <div class="h-60 overflow-hidden relative">
+                                <img src="https://picsum.photos/600/600?random=12" alt="Superfire W2 Work Light" class="w-full h-full object-cover">
+                                <div class="absolute top-3 right-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                    SALE
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <h3 class="text-lg font-bold mb-2">W2 Work Light</h3>
+                                <p class="text-sm text-neutral-dark/70 mb-3">Industrial-grade 5000 lumen work light with magnetic base and hanging hook</p>
+                                <div class="flex items-center mb-4">
+                                    <div class="flex">
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star text-yellow-400"></i>
+                                        <i class="fa fa-star-half-o text-yellow-400"></i>
+                                    </div>
+                                    <span class="text-xs text-neutral-dark/70 ml-2">(48 reviews)</span>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-3">
+                                    <button class="btn-secondary flex-1 text-center">
+                                        Get Quote
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="mt-12 flex justify-center">
+                        <nav class="inline-flex rounded-md shadow">
+                            <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-neutral-dark hover:bg-neutral">
+                                <i class="fa fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="px-4 py-2 border border-gray-300 bg-accent text-sm font-medium text-white">1</a>
+                            <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-neutral-dark hover:bg-neutral">2</a>
+                            <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-neutral-dark hover:bg-neutral">3</a>
+                            <span class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-neutral-dark">...</span>
+                            <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-neutral-dark hover:bg-neutral">8</a>
+                            <a href="#" class="px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-neutral-dark hover:bg-neutral">
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-white mb-6">Can't Find What You're Looking For?</h2>
+            <p class="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+                Need a custom lighting solution for your business? Our team of experts is ready to help you find the perfect product.
+            </p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-medium hover:bg-neutral transition-colors inline-block">
+                Contact Our Product Specialists
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="index.html" class="inline-block mb-6">
+                        <img src="https://picsum.photos/200/80?random=12" alt="Superfire Logo" class="h-10">
+                    </a>
+                    <p class="text-white/70 mb-6">
+                        Superfire is a leading manufacturer of high-performance lighting solutions, serving businesses and consumers worldwide with innovative products and exceptional service.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-white/70 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="oem-odm.html" class="text-white/70 hover:text-white transition-colors">OEM/ODM Services</a></li>
+                        <li><a href="wholesale.html" class="text-white/70 hover:text-white transition-colors">Wholesale</a></li>
+                        <li><a href="enterprise-solutions.html" class="text-white/70 hover:text-white transition-colors">Enterprise Solutions</a></li>
+                        <li><a href="promotional-gifts.html" class="text-white/70 hover:text-white transition-colors">Promotional Gifts</a></li>
+                        <li><a href="about.html" class="text-white/70 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Product Categories</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Flashlights</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Headlamps</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Lanterns</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Work Lights</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Tactical Lights</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Accessories</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Replacement Batteries</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-accent mt-1 mr-3"></i>
+                            <span class="text-white/70">No. 123, Lighting Industrial Park, Shenzhen, China</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone text-accent mr-3"></i>
+                            <span class="text-white/70">+86 755 1234 5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope text-accent mr-3"></i>
+                            <span class="text-white/70">info@superfire.com</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="font-medium mb-3">Subscribe to Our Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="px-4 py-2 rounded-l-md w-full focus:outline-none text-neutral-dark">
+                            <button class="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-r-md transition-colors">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white/50 text-sm mb-4 md:mb-0">© 2023 Superfire. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-white/50 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-white/50 hover:text-white text-sm transition-colors">Terms of Service</a>
+                        <a href="#" class="text-white/50 hover:text-white text-sm transition-colors">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation for header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

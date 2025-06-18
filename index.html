@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superfire - Professional Lighting Solutions Provider</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F3460',
+                        secondary: '#1A508B',
+                        accent: '#3282B8',
+                        neutral: '#E4E4E4',
+                        'neutral-dark': '#333333',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:shadow-md;
+            }
+            .btn-secondary {
+                @apply bg-white text-primary border border-primary px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-neutral hover:shadow-md;
+            }
+        }
+    </style>
+</head>
+<body class="font-inter text-neutral-dark">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="https://picsum.photos/200/80?random=1" alt="Superfire Logo" class="h-10">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                <div class="relative group">
+                    <a href="products.html" class="font-medium hover:text-accent transition-colors flex items-center">
+                        Products
+                        <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                        <div class="py-1">
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
+                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Accessories</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <a href="#" class="font-medium hover:text-accent transition-colors flex items-center">
+                        B2B Solutions
+                        <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                    </a>
+                    <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                        <div class="py-1">
+                            <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
+                            <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
+                            <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
+                            <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
+                <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
+                <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
+            </div>
+            
+            <!-- User Actions -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
+                <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
+                <div class="relative">
+                    <a href="#" class="text-lg hover:text-accent transition-colors">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </a>
+                </div>
+                <button class="md:hidden text-lg">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[80vh] bg-primary overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="https://picsum.photos/1920/1080?random=2" alt="Professional Lighting Solutions" class="w-full h-full object-cover opacity-30">
+            </div>
+            <div class="container mx-auto px-4 h-full flex items-center relative z-10">
+                <div class="max-w-2xl">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-white leading-tight mb-6">
+                        Professional Lighting <br>Solutions Provider
+                    </h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-xl">
+                        With 20+ years of experience, we deliver customized lighting solutions for global brands, wholesalers, enterprises, and promotional needs.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#b2b-tracks" class="btn-primary">
+                            Explore B2B Solutions
+                        </a>
+                        <a href="#products" class="btn-secondary">
+                            Browse Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-white to-transparent"></div>
+        </section>
+
+        <!-- B2B Business Tracks -->
+        <section id="b2b-tracks" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark mb-4">Our B2B Solutions</h2>
+                    <p class="text-lg text-neutral-dark/70 max-w-2xl mx-auto">
+                        Tailored business models to meet your specific needs, from customization to bulk purchasing and enterprise solutions.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- OEM/ODM -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/600/400?random=3" alt="OEM/ODM Customization" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">OEM/ODM Services</h3>
+                            <p class="text-neutral-dark/70 mb-4">
+                                Custom lighting solutions tailored to your brand's unique specifications and requirements.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Full customization from design to production</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Proprietary technology integration</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Strict quality control processes</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-accent font-medium hover:underline">
+                                Learn More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Wholesale -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/600/400?random=4" alt="Wholesale Distribution" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Wholesale</h3>
+                            <p class="text-neutral-dark/70 mb-4">
+                                Competitive pricing, deep inventory, and reliable logistics for distributors and retailers.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Volume-based pricing tiers</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Fast turnaround and shipping</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Dedicated account management</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-accent font-medium hover:underline">
+                                Learn More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Enterprise Solutions -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/600/400?random=5" alt="Enterprise Solutions" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Enterprise Solutions</h3>
+                            <p class="text-neutral-dark/70 mb-4">
+                                Specialized lighting solutions for industrial, law enforcement, and government applications.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Heavy-duty, reliable products</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Customized specifications</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Comprehensive support services</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-accent font-medium hover:underline">
+                                Learn More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Promotional Gifts -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://picsum.photos/600/400?random=6" alt="Promotional Gifts" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-3">Promotional Gifts</h3>
+                            <p class="text-neutral-dark/70 mb-4">
+                                Custom-branded lighting products to enhance your marketing campaigns and corporate events.
+                            </p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Logo customization options</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Fast turnaround for events</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-check text-accent mt-1 mr-2"></i>
+                                    <span>Premium packaging solutions</span>
+                                </li>
+                            </ul>
+                            <a href="#" class="inline-block text-accent font-medium hover:underline">
+                                Learn More <i class="fa fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase -->
+        <section id="products" class="py-20 bg-neutral/30">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                    <div>
+                        <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark mb-4">Featured Products</h2>
+                        <p class="text-lg text-neutral-dark/70 max-w-2xl">
+                            Discover our latest and most popular lighting solutions, designed for both professional and personal use.
+                        </p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <a href="#" class="btn-primary">
+                            View All Products
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Product 1 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://picsum.photos/600/600?random=7" alt="Superfire A2 Rechargeable Flashlight" class="w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-accent text-white text-xs font-bold px-2 py-1 rounded">
+                                NEW
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">A2 Rechargeable Flashlight</h3>
+                            <p class="text-sm text-neutral-dark/70 mb-3">Ultra-bright 2000 lumen flashlight with USB-C rechargeable battery</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex">
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star-half-o text-yellow-400"></i>
+                                </div>
+                                <span class="text-sm text-neutral-dark/70 ml-2">(42 reviews)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-neutral-dark/70 line-through text-sm">$89.99</span>
+                                    <span class="text-primary font-bold text-lg ml-2">$79.99</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm px-4 py-2">
+                                        Buy Sample
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 2 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://picsum.photos/600/600?random=8" alt="Superfire H5 Headlamp" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">H5 Headlamp</h3>
+                            <p class="text-sm text-neutral-dark/70 mb-3">Lightweight 1200 lumen headlamp with adjustable beam and red light mode</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex">
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star-o text-yellow-400"></i>
+                                </div>
+                                <span class="text-sm text-neutral-dark/70 ml-2">(28 reviews)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-primary font-bold text-lg">$59.99</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm px-4 py-2">
+                                        Buy Sample
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 3 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://picsum.photos/600/600?random=9" alt="Superfire T1 Tactical Flashlight" class="w-full h-full object-cover">
+                            <div class="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                BEST SELLER
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">T1 Tactical Flashlight</h3>
+                            <p class="text-sm text-neutral-dark/70 mb-3">Military-grade 3000 lumen flashlight with strobe and self-defense features</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex">
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                </div>
+                                <span class="text-sm text-neutral-dark/70 ml-2">(76 reviews)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-primary font-bold text-lg">$109.99</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm px-4 py-2">
+                                        Buy Sample
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 -->
+                    <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                        <div class="h-60 overflow-hidden relative">
+                            <img src="https://picsum.photos/600/600?random=10" alt="Superfire L3 Lantern" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-bold mb-2">L3 Lantern</h3>
+                            <p class="text-sm text-neutral-dark/70 mb-3">2000 lumen rechargeable lantern with 360° illumination and power bank function</p>
+                            <div class="flex items-center mb-4">
+                                <div class="flex">
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star text-yellow-400"></i>
+                                    <i class="fa fa-star-half-o text-yellow-400"></i>
+                                </div>
+                                <span class="text-sm text-neutral-dark/70 ml-2">(35 reviews)</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <span class="text-primary font-bold text-lg">$79.99</span>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="btn-secondary text-sm px-4 py-2">
+                                        Buy Sample
+                                    </button>
+                                    <button class="bg-primary text-white p-2 rounded-md hover:bg-secondary transition-colors">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Authority -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark mb-4">Our Capabilities & Trust</h2>
+                    <p class="text-lg text-neutral-dark/70 max-w-2xl mx-auto">
+                        Backed by years of experience, cutting-edge technology, and a commitment to quality that sets us apart.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Certifications -->
+                    <div class="bg-white rounded-xl shadow-md p-8 card-hover">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-certificate text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Certifications & Standards</h3>
+                        <p class="text-neutral-dark/70 mb-4">
+                            Our products meet the highest international standards, ensuring reliability and performance you can trust.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="bg-neutral/30 px-4 py-2 rounded-md text-sm font-medium">ISO 9001</div>
+                            <div class="bg-neutral/30 px-4 py-2 rounded-md text-sm font-medium">CE Certified</div>
+                            <div class="bg-neutral/30 px-4 py-2 rounded-md text-sm font-medium">RoHS Compliant</div>
+                            <div class="bg-neutral/30 px-4 py-2 rounded-md text-sm font-medium">IP68 Waterproof</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Manufacturing -->
+                    <div class="bg-white rounded-xl shadow-md p-8 card-hover">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-industry text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Manufacturing Excellence</h3>
+                        <p class="text-neutral-dark/70 mb-4">
+                            State-of-the-art facilities and rigorous quality control processes ensure every product meets our strict standards.
+                        </p>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Advanced R&D Center</span>
+                                    <span class="text-sm font-medium">98%</span>
+                                </div>
+                                <div class="w-full bg-neutral/30 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 98%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Automated Production</span>
+                                    <span class="text-sm font-medium">95%</span>
+                                </div>
+                                <div class="w-full bg-neutral/30 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">Quality Control</span>
+                                    <span class="text-sm font-medium">100%</span>
+                                </div>
+                                <div class="w-full bg-neutral/30 rounded-full h-2">
+                                    <div class="bg-primary h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Partnerships -->
+                    <div class="bg-white rounded-xl shadow-md p-8 card-hover">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                            <i class="fa fa-handshake-o text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Trusted Partnerships</h3>
+                        <p class="text-neutral-dark/70 mb-4">
+                            We've built strong relationships with leading brands worldwide, delivering customized solutions for diverse needs.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="h-16 bg-neutral/30 rounded-md flex items-center justify-center">
+                                <span class="text-sm font-medium">Brand A</span>
+                            </div>
+                            <div class="h-16 bg-neutral/30 rounded-md flex items-center justify-center">
+                                <span class="text-sm font-medium">Brand B</span>
+                            </div>
+                            <div class="h-16 bg-neutral/30 rounded-md flex items-center justify-center">
+                                <span class="text-sm font-medium">Brand C</span>
+                            </div>
+                            <div class="h-16 bg-neutral/30 rounded-md flex items-center justify-center">
+                                <span class="text-sm font-medium">Brand D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CTA Section -->
+                <div class="bg-primary rounded-2xl overflow-hidden relative">
+                    <div class="absolute inset-0 opacity-10">
+                        <img src="https://picsum.photos/1920/1080?random=11" alt="Background" class="w-full h-full object-cover">
+                    </div>
+                    <div class="container mx-auto px-4 py-16 relative z-10">
+                        <div class="max-w-3xl">
+                            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-white mb-6">Ready to Transform Your Lighting Solutions?</h2>
+                            <p class="text-white/90 text-lg mb-8">
+                                Partner with Superfire for innovative, high-quality lighting products tailored to your specific needs.
+                            </p>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="#" class="bg-white text-primary px-8 py-4 rounded-md font-medium hover:bg-neutral transition-colors">
+                                    Contact Our Team
+                                </a>
+                                <a href="#" class="border border-white text-white px-8 py-4 rounded-md font-medium hover:bg-white/10 transition-colors">
+                                    Request a Quote
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="inline-block mb-6">
+                        <img src="https://picsum.photos/200/80?random=12" alt="Superfire Logo" class="h-10">
+                    </a>
+                    <p class="text-white/70 mb-6">
+                        Superfire is a leading manufacturer of high-performance lighting solutions, serving businesses and consumers worldwide with innovative products and exceptional service.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">OEM/ODM Services</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Wholesale</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Enterprise Solutions</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Promotional Gifts</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Shipping Policy</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Return Policy</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Warranty Information</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-3 text-accent"></i>
+                            <span class="text-white/70">123 Lighting Street, Industrial Park, Shenzhen, China 518000</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone mt-1 mr-3 text-accent"></i>
+                            <span class="text-white/70">+86 755 1234 5678</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope mt-1 mr-3 text-accent"></i>
+                            <span class="text-white/70">info@superfire.com</span>
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-base font-medium mb-3">Subscribe to our newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email address" class="bg-white/10 border border-white/20 rounded-l-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-accent">
+                            <button class="bg-accent text-white px-4 py-2 rounded-r-md hover:bg-accent/90 transition-colors">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-white/70 text-sm mb-4 md:mb-0">
+                        &copy; 2025 Superfire. All rights reserved.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Terms of Service</a>
+                        <a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation for header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    

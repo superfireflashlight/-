@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Solutions - Superfire Lighting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#3B82F6',
+                        neutral: {
+                            light: '#F3F4F6',
+                            DEFAULT: '#9CA3AF',
+                            dark: '#374151'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-neutral-dark bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-20 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="https://picsum.photos/200/80?random=1" alt="Superfire Logo" class="h-10">
+                    </a>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                        <div class="relative group">
+                            <a href="products.html" class="font-medium hover:text-accent transition-colors flex items-center">
+                                Products
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">All Products</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <a href="#" class="font-medium text-accent border-b-2 border-accent pb-1 flex items-center">
+                                B2B Solutions
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
+                                    <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
+                                    <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
+                                    <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
+                    <div class="relative">
+                        <a href="#" class="text-lg hover:text-accent transition-colors">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                        </a>
+                    </div>
+                    <button class="md:hidden text-lg">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow">
+                        Enterprise Lighting Solutions
+                    </h1>
+                    <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-lg">
+                        Customized lighting solutions for security, inspection, construction, and industrial applications with proven reliability and performance.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="#contact" class="inline-block bg-white text-primary hover:bg-neutral-light px-6 py-3 rounded-md text-sm font-medium transition-custom shadow-lg">
+                            Request Solution
+                        </a>
+                        <a href="#industries" class="inline-block bg-transparent border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                            Explore Industries
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://via.placeholder.com/600x400" alt="Enterprise Solutions" class="rounded-lg shadow-2xl transform -rotate-2 hover:rotate-0 transition-custom duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions Section -->
+    <section id="industries" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Industry-Specific Solutions</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">Tailored lighting solutions designed for the unique challenges of your industry</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-custom">
+                    <img src="https://via.placeholder.com/600x400" alt="Security Industry" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Security & Surveillance</h3>
+                        <p class="text-white/90 mb-4">High-intensity lighting for CCTV enhancement, perimeter security, and emergency response.</p>
+                        <a href="#security" class="inline-flex items-center text-white hover:text-secondary transition-custom">
+                            Learn more <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-custom">
+                    <img src="https://via.placeholder.com/600x400" alt="Industrial Inspection" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Industrial Inspection</h3>
+                        <p class="text-white/90 mb-4">Specialized lighting tools for pipeline inspection, infrastructure maintenance, and quality control.</p>
+                        <a href="#inspection" class="inline-flex items-center text-white hover:text-secondary transition-custom">
+                            Learn more <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-custom">
+                    <img src="https://via.placeholder.com/600x400" alt="Construction Industry" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Construction & Mining</h3>
+                        <p class="text-white/90 mb-4">Durable, waterproof lighting solutions for harsh environments and 24/7 construction sites.</p>
+                        <a href="#construction" class="inline-flex items-center text-white hover:text-secondary transition-custom">
+                            Learn more <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Details Section -->
+    <section id="security" class="py-16 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-primary font-semibold">SECURITY SOLUTIONS</span>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark mt-2">Enhanced Security Lighting Systems</h2>
+                    <p class="mt-4 text-lg text-neutral">Our security lighting solutions provide superior illumination for critical infrastructure, public spaces, and commercial properties.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-shield text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Perimeter Protection</h3>
+                                <p class="text-neutral">High-intensity LED floodlights with motion detection for secure facility perimeters.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-video-camera text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">CCTV Integration</h3>
+                                <p class="text-neutral">Optimized lighting for surveillance camera systems with IR capabilities for 24/7 monitoring.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-bolt text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Emergency Response</h3>
+                                <p class="text-neutral">Portable tactical lighting for security personnel and emergency response teams.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                            Get Security Solution
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/300x300" alt="Security Lighting" class="rounded-lg shadow-md transform translate-y-8">
+                    <img src="https://via.placeholder.com/300x300" alt="Surveillance Integration" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="inspection" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
+                <div>
+                    <span class="text-primary font-semibold">INSPECTION SOLUTIONS</span>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark mt-2">Professional Inspection Lighting</h2>
+                    <p class="mt-4 text-lg text-neutral">Specialized lighting tools designed for industrial inspection, maintenance, and quality control applications.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-search text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Precision Inspection</h3>
+                                <p class="text-neutral">High-CRI lighting for detailed visual inspections and defect detection.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-pipe text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Pipeline & Infrastructure</h3>
+                                <p class="text-neutral">Specialized lighting for confined space inspections and infrastructure maintenance.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-flask text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Laboratory & Quality Control</h3>
+                                <p class="text-neutral">Color-accurate lighting solutions for quality assurance and laboratory environments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                            Get Inspection Solution
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/300x300" alt="Inspection Lighting" class="rounded-lg shadow-md transform translate-y-8">
+                    <img src="https://via.placeholder.com/300x300" alt="Industrial Maintenance" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="construction" class="py-16 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-primary font-semibold">CONSTRUCTION SOLUTIONS</span>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark mt-2">Heavy-Duty Construction Lighting</h2>
+                    <p class="mt-4 text-lg text-neutral">Durable, weatherproof lighting solutions for construction sites, mining operations, and infrastructure projects.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-industry text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Site Illumination</h3>
+                                <p class="text-neutral">Powerful area lighting for 24/7 construction sites and remote project locations.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-tint text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Weatherproof Design</h3>
+                                <p class="text-neutral">IP68-rated lighting solutions for harsh environments and all-weather conditions.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                                <i class="fa fa-users text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold">Worker Safety</h3>
+                                <p class="text-neutral">High-visibility lighting and personal safety lights for worker protection.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                            Get Construction Solution
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/300x300" alt="Construction Lighting" class="rounded-lg shadow-md transform translate-y-8">
+                    <img src="https://via.placeholder.com/300x300" alt="Mining Operations" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Durability Testing Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Rigorous Durability Testing</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">Our products undergo extensive testing to ensure reliability in the most demanding environments</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-thermometer-three-quarters text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Extreme Temperature Testing</h3>
+                        </div>
+                        <p class="text-neutral">Products tested from -40°C to +60°C (-40°F to +140°F) to ensure performance in extreme climate conditions.</p>
+                    </div>
+
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-tint text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Waterproof & Dustproof Testing</h3>
+                        </div>
+                        <p class="text-neutral">IP68 and IP69K ratings ensure protection against water immersion, high-pressure washing, and dust ingress.</p>
+                    </div>
+
+                    <div class="bg-neutral-light p-6 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa fa-bolt text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold">Impact Resistance</h3>
+                        </div>
+                        <p class="text-neutral">MIL-STD-810G certification for drop protection up to 2 meters and resistance to mechanical shock and vibration.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://via.placeholder.com/600x400" alt="Durability Testing" class="rounded-lg shadow-lg">
+                    <div class="mt-6 grid grid-cols-3 gap-4">
+                        <div class="bg-primary text-white p-4 rounded-lg text-center">
+                            <i class="fa fa-certificate text-3xl mb-2"></i>
+                            <p class="text-sm font-medium">ISO 9001 Certified</p>
+                        </div>
+                        <div class="bg-primary text-white p-4 rounded-lg text-center">
+                            <i class="fa fa-certificate text-3xl mb-2"></i>
+                            <p class="text-sm font-medium">CE Approved</p>
+                        </div>
+                        <div class="bg-primary text-white p-4 rounded-lg text-center">
+                            <i class="fa fa-certificate text-3xl mb-2"></i>
+                            <p class="text-sm font-medium">RoHS Compliant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="py-16 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Success Stories</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">See how our lighting solutions have helped businesses across industries</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/600x300" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-primary">SECURITY INDUSTRY</span>
+                        <h3 class="text-xl font-bold mt-1 mb-3">National Airport Security Upgrade</h3>
+                        <p class="text-neutral mb-4">Implemented high-intensity perimeter lighting for 12 major airports, reducing security incidents by 47%.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary transition-custom font-medium">
+                            Read full case study <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://via.placeholder.com/600x300" alt="Case Study" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-sm font-semibold text-primary">CONSTRUCTION INDUSTRY</span>
+                        <h3 class="text-xl font-bold mt-1 mb-3">Metro Tunnel Construction Project</h3>
+                        <p class="text-neutral mb-4">Provided waterproof lighting solutions for underground tunnel construction, enabling 24/7 work with zero safety incidents.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary transition-custom font-medium">
+                            Read full case study <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bidding资质 Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Bidding Qualifications</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">Our comprehensive资质 enables us to participate in major government and corporate tenders worldwide</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md text-center">
+                    <i class="fa fa-building text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Government Contracts</h3>
+                    <p class="text-neutral">Qualified supplier for municipal, state, and federal government projects with GSA certification.</p>
+                </div>
+
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md text-center">
+                    <i class="fa fa-industry text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Infrastructure Projects</h3>
+                    <p class="text-neutral">Approved vendor for transportation, energy, and public works projects with required safety certifications.</p>
+                </div>
+
+                <div class="bg-neutral-light p-6 rounded-lg shadow-md text-center">
+                    <i class="fa fa-globe text-primary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">International Standards</h3>
+                    <p class="text-neutral">Compliant with global standards including CE, UL, RoHS, and ISO certifications for worldwide tender participation.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-md text-sm font-medium transition-custom">
+                    Request资质 Documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold">Get Your Custom Enterprise Solution</h2>
+                    <p class="mt-4 text-white/90 text-lg">Our lighting experts will work with you to develop a tailored solution for your specific industry needs.</p>
+
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-user-plus"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Dedicated Account Manager</h3>
+                                <p class="text-white/80 mt-1">Personalized support from industry specialists with deep knowledge of your sector</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Custom Proposal Development</h3>
+                                <p class="text-white/80 mt-1">Tailored solutions designed to meet your specific requirements and budget constraints</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa fa-comments"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Technical Consultation</h3>
+                                <p class="text-white/80 mt-1">Expert advice on product selection, implementation, and integration with existing systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="bg-white p-6 rounded-lg shadow-lg text-neutral-dark">
+                        <h3 class="text-xl font-semibold mb-6">Request Industry Solution</h3>
+
+                        <div class="mb-4">
+                            <label for="company" class="block text-sm font-medium text-neutral-dark mb-1">Company Name</label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your company name">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="contact-person" class="block text-sm font-medium text-neutral-dark mb-1">Contact Person</label>
+                            <input type="text" id="contact-person" name="contact-person" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-neutral-dark mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your email address">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-medium text-neutral-dark mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your phone number">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="industry" class="block text-sm font-medium text-neutral-dark mb-1">Industry</label>
+                            <select id="industry" name="industry" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select your industry</option>
+                                <option value="security">Security & Surveillance</option>
+                                <option value="construction">Construction & Mining</option>
+                                <option value="inspection">Industrial Inspection</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="energy">Energy & Utilities</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="block text-sm font-medium text-neutral-dark mb-1">Project Requirements</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Describe your project requirements"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-md text-sm font-medium transition-custom">
+                            Submit Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Superfire</h3>
+                    <p class="text-white/70 text-sm">Leading manufacturer of high-quality lighting products with over 15 years of industry experience.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-white transition-custom">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-custom">Products</a></li>
+                        <li><a href="oem-odm.html" class="hover:text-white transition-custom">OEM/ODM Services</a></li>
+                        <li><a href="wholesale.html" class="hover:text-white transition-custom">Wholesale Program</a></li>
+                        <li><a href="enterprise-solutions.html" class="hover:text-white transition-custom">Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product Categories</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="#" class="hover:text-white transition-custom">Flashlights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Headlamps</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Work Lights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Bicycle Lights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Camping Lights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-white/70 text-sm">Subscribe to our newsletter for the latest product updates and industry insights.</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 text-sm rounded-l-md focus:outline-none w-full">
+                        <button class="bg-primary hover:bg-primary/90 px-3 py-2 text-sm rounded-r-md transition-custom">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/50 text-sm">© 2023 Superfire. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Privacy Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Terms of Service</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

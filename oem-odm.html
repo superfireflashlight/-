@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OEM/ODM Services - Your Brand Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#3B82F6',
+                        neutral: {
+                            light: '#F3F4F6',
+                            DEFAULT: '#9CA3AF',
+                            dark: '#374151'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-neutral-dark bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-20 top-0 left-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <img src="https://picsum.photos/200/80?random=1" alt="Superfire Logo" class="h-10">
+                    </a>
+                    <div class="hidden md:ml-10 md:flex md:space-x-8">
+                        <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
+                        <div class="relative group">
+                            <a href="products.html" class="font-medium hover:text-accent transition-colors flex items-center">
+                                Products
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">All Products</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
+                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative group">
+                            <a href="#" class="font-medium text-accent border-b-2 border-accent pb-1 flex items-center">
+                                B2B Solutions
+                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
+                            </a>
+                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
+                                <div class="py-1">
+                                    <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
+                                    <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
+                                    <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
+                                    <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
+                        <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
+                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
+                    <div class="relative">
+                        <a href="#" class="text-lg hover:text-accent transition-colors">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                        </a>
+                    </div>
+                    <button class="md:hidden text-lg">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-shadow">
+                        OEM/ODM Custom Solutions
+                    </h1>
+                    <p class="mt-4 text-[clamp(1rem,2vw,1.25rem)] text-white/90 max-w-lg">
+                        Partner with us to create tailored lighting solutions that meet your specific brand requirements and market needs.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-white text-primary hover:bg-neutral-light px-6 py-3 rounded-md text-sm font-medium transition-custom shadow-lg">
+                            Start Your Project
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://via.placeholder.com/600x400" alt="OEM/ODM Custom Solutions" class="rounded-lg shadow-2xl transform rotate-2 hover:rotate-0 transition-custom duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Comprehensive OEM/ODM Services</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">We provide end-to-end customization services tailored to product managers and brand owners</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-neutral-light rounded-lg p-6 shadow-md hover:shadow-lg transition-custom">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Product Design</h3>
+                    <p class="text-neutral">Our engineering team will work with you to develop custom lighting solutions based on your specifications and market requirements.</p>
+                </div>
+
+                <div class="bg-neutral-light rounded-lg p-6 shadow-md hover:shadow-lg transition-custom">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-industry text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Manufacturing</h3>
+                    <p class="text-neutral">Leverage our state-of-the-art production facilities to manufacture high-quality lighting products at competitive prices.</p>
+                </div>
+
+                <div class="bg-neutral-light rounded-lg p-6 shadow-md hover:shadow-lg transition-custom">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-cube text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Branding & Packaging</h3>
+                    <p class="text-neutral">Complete customization of logos, colors, and packaging to ensure your products stand out in the marketplace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-16 bg-neutral-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Our Customization Process</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">Streamlined workflow to bring your custom lighting products to market efficiently</p>
+            </div>
+
+            <div class="relative">
+                <!-- Process Steps -->
+                <div class="hidden md:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-primary/20 transform -translate-x-1/2"></div>
+
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right md:pr-12">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Requirements Analysis</h3>
+                            <p class="text-neutral-dark">We start by understanding your specific needs, target market, and technical requirements for the custom lighting product.</p>
+                        </div>
+                        <div class="hidden md:block relative">
+                            <div class="absolute -left-5 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">1</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="hidden md:block relative order-1">
+                            <div class="absolute -right-5 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">2</div>
+                        </div>
+                        <div class="md:pl-12 order-2">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Design & Prototyping</h3>
+                            <p class="text-neutral-dark">Our engineering team develops design concepts and creates functional prototypes for your evaluation and feedback.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right md:pr-12">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Testing & Validation</h3>
+                            <p class="text-neutral-dark">Prototypes undergo rigorous testing to ensure they meet your specifications, quality standards, and regulatory requirements.</p>
+                        </div>
+                        <div class="hidden md:block relative">
+                            <div class="absolute -left-5 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">3</div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="hidden md:block relative order-1">
+                            <div class="absolute -right-5 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">4</div>
+                        </div>
+                        <div class="md:pl-12 order-2">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Mass Production</h3>
+                            <p class="text-neutral-dark">Once approved, we proceed with manufacturing, implementing strict quality control measures throughout the production process.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                        <div class="md:text-right md:pr-12">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Delivery & Support</h3>
+                            <p class="text-neutral-dark">We handle logistics and delivery, and provide ongoing support to ensure your complete satisfaction with the final product.</p>
+                        </div>
+                        <div class="hidden md:block relative">
+                            <div class="absolute -left-5 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-dark">Our Manufacturing Capabilities</h2>
+                <p class="mt-4 text-lg text-neutral max-w-3xl mx-auto">State-of-the-art facilities and advanced technologies to deliver exceptional quality</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Advanced LED technology integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Precision CNC machining capabilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Automated assembly lines for consistent quality</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>Custom battery pack design and integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>IP65-IP68 waterproof rating capabilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-3"></i>
+                            <span>RoHS, CE, FCC, and UL certification support</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8">
+                        <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-md text-sm font-medium transition-custom">
+                            Discuss Your Requirements
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://via.placeholder.com/300x200" alt="Manufacturing Facility" class="rounded-lg shadow-md hover:shadow-lg transition-custom">
+                    <img src="https://via.placeholder.com/300x200" alt="Quality Control" class="rounded-lg shadow-md hover:shadow-lg transition-custom mt-8">
+                    <img src="https://via.placeholder.com/300x200" alt="Assembly Line" class="rounded-lg shadow-md hover:shadow-lg transition-custom">
+                    <img src="https://via.placeholder.com/300x200" alt="Testing Lab" class="rounded-lg shadow-md hover:shadow-lg transition-custom mt-8">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold">Start Your Custom Project Today</h2>
+                    <p class="mt-4 text-white/90 text-lg">Fill out the form and our OEM/ODM specialists will contact you within 24 hours to discuss your project requirements.</p>
+
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center">
+                            <i class="fa fa-envelope-o text-white/80 mr-3"></i>
+                            <span>oem@yourbrand.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-phone text-white/80 mr-3"></i>
+                            <span>+86 123 4567 8910</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-map-marker text-white/80 mr-3"></i>
+                            <span>123 Manufacturing St, Industrial Zone, City, Country</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="bg-white p-6 rounded-lg shadow-lg text-neutral-dark">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-neutral-dark mb-1">Company Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your company name">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="contact" class="block text-sm font-medium text-neutral-dark mb-1">Contact Person</label>
+                            <input type="text" id="contact" name="contact" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium text-neutral-dark mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your email address">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phone" class="block text-sm font-medium text-neutral-dark mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your phone number">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="project" class="block text-sm font-medium text-neutral-dark mb-1">Project Description</label>
+                            <textarea id="project" name="project" rows="4" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Describe your custom lighting requirements"></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="quantity" class="block text-sm font-medium text-neutral-dark mb-1">Estimated Quantity</label>
+                            <select id="quantity" name="quantity" class="w-full px-4 py-2 border border-neutral rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                                <option value="">Select quantity range</option>
+                                <option value="100-500">100 - 500 units</option>
+                                <option value="501-1000">501 - 1000 units</option>
+                                <option value="1001-5000">1001 - 5000 units</option>
+                                <option value="5001+">5001+ units</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 rounded-md text-sm font-medium transition-custom">
+                            Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Your Brand</h3>
+                    <p class="text-white/70 text-sm">Leading manufacturer of high-quality lighting products with over 15 years of industry experience.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="index.html" class="hover:text-white transition-custom">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white transition-custom">Products</a></li>
+                        <li><a href="oem-odm.html" class="hover:text-white transition-custom">OEM/ODM Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Product Categories</h3>
+                    <ul class="space-y-2 text-sm text-white/70">
+                        <li><a href="#" class="hover:text-white transition-custom">Flashlights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Headlamps</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Work Lights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Bicycle Lights</a></li>
+                        <li><a href="#" class="hover:text-white transition-custom">Camping Lights</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-custom">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-white/70 text-sm">Subscribe to our newsletter for the latest product updates and industry insights.</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 text-sm rounded-l-md focus:outline-none w-full">
+                        <button class="bg-primary hover:bg-primary/90 px-3 py-2 text-sm rounded-r-md transition-custom">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-white/50 text-sm">© 2023 Your Brand. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Privacy Policy</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Terms of Service</a>
+                    <a href="#" class="text-white/50 hover:text-white text-sm transition-custom">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
