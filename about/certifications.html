@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>认证与专利 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .cert-card {
+                @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg flex flex-col items-center text-center;
+            }
+            .patent-item {
+                @apply bg-white rounded-lg shadow-sm p-4 mb-4 hover:shadow-md transition-shadow;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../cs-aboutus.html" class="text-neutral-dark/70 hover:text-primary">关于Superfire</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">认证与专利</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">认证与专利</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        Superfire始终将产品质量和技术创新放在首位，通过了多项国际权威认证，拥有丰富的专利技术成果。我们的产品符合全球市场标准，为客户提供安全可靠的照明解决方案。
+                    </p>
+                </div>
+
+                <!-- International Certifications -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fa fa-certificate text-primary mr-3"></i>国际认证
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="cert-card">
+                            <div class="text-5xl text-primary mb-4"><i class="fa fa-check-circle"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">ISO9001</h3>
+                            <p class="text-neutral-dark/70">质量管理体系认证</p>
+                        </div>
+                        <div class="cert-card">
+                            <div class="text-5xl text-primary mb-4"><i class="fa fa-check-circle"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">CE</h3>
+                            <p class="text-neutral-dark/70">欧盟安全认证</p>
+                        </div>
+                        <div class="cert-card">
+                            <div class="text-5xl text-primary mb-4"><i class="fa fa-check-circle"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">FCC</h3>
+                            <p class="text-neutral-dark/70">美国联邦通信委员会认证</p>
+                        </div>
+                        <div class="cert-card">
+                            <div class="text-5xl text-primary mb-4"><i class="fa fa-check-circle"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">ROHS</h3>
+                            <p class="text-neutral-dark/70">环保认证</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patent Achievements -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fa fa-lightbulb-o text-primary mr-3"></i>专利成果
+                    </h2>
+                    <div class="bg-neutral/30 rounded-xl p-6 mb-8">
+                        <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-1">专利统计</h3>
+                                <p class="text-neutral-dark/70">截至2023年，公司累计获得授权专利32项</p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-6 w-full md:w-auto mt-4 md:mt-0">
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">8</div>
+                                    <div class="text-sm text-neutral-dark/70">发明专利</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">15</div>
+                                    <div class="text-sm text-neutral-dark/70">实用新型</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-3xl font-bold text-primary">9</div>
+                                    <div class="text-sm text-neutral-dark/70">外观设计</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="patent-item">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-semibold">一种高效散热的LED手电筒</h3>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded">发明专利</span>
+                            </div>
+                            <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202110XXXXXX.XX</div>
+                            <p class="mt-3 text-neutral-dark/70">本发明公开了一种高效散热的LED手电筒，通过创新的散热结构设计，将LED光源产生的热量快速导出，提高了手电筒的使用寿命和稳定性。</p>
+                        </div>
+
+                        <div class="patent-item">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-semibold">多模式智能调光控制系统</h3>
+                                <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded">发明专利</span>
+                            </div>
+                            <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202210XXXXXX.XX</div>
+                            <p class="mt-3 text-neutral-dark/70">该系统实现了LED照明设备的智能调光控制，支持多种照明模式切换，可根据环境光强度自动调节亮度，达到节能和舒适照明的效果。</p>
+                        </div>
+
+                        <div class="patent-item">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-semibold">防水防尘照明设备结构</h3>
+                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded">实用新型专利</span>
+                            </div>
+                            <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202120XXXXXX.XX</div>
+                            <p class="mt-3 text-neutral-dark/70">本实用新型涉及一种防水防尘照明设备结构，通过多重密封设计，达到IP68防护等级，可在恶劣环境下可靠工作。</p>
+                        </div>
+
+                        <div class="patent-item">
+                            <div class="flex justify-between items-start">
+                                <h3 class="text-lg font-semibold">便携式多功能照明工具</h3>
+                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded">外观设计专利</span>
+                            </div>
+                            <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202230XXXXXX.XX</div>
+                            <p class="mt-3 text-neutral-dark/70">本外观设计产品用于户外照明，其设计简约时尚，握持舒适，功能多样，适合多种户外场景使用。</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <button class="btn-secondary">
+                            查看全部专利 <i class="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 滚动动画
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

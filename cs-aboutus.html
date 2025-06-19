@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于Superfire - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .btn-primary {
+                @apply bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-md font-medium hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+            }
+            .btn-secondary {
+                @apply bg-white text-primary border border-primary px-6 py-3 rounded-md font-medium hover:bg-primary/5 transition-colors duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-neutral/30">
+        <div class="container mx-auto px-4">
+            <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-center">关于Superfire</h1>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-lg text-neutral-dark/80">
+                    20年专业照明解决方案提供商，服务全球500+品牌，致力于为客户提供高品质、创新的照明产品。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 公司简介 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-building text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">公司简介</h2>
+                        <p class="text-neutral-dark/70 mb-4">了解Superfire的发展历程、使命愿景和核心价值观。</p>
+                        <a href="about/company-profile.html" class="btn-secondary inline-block">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 生产实力 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-industry text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">生产实力</h2>
+                        <p class="text-neutral-dark/70 mb-4">10条自动化生产线，月产能50万件，严格的质量控制流程。</p>
+                        <a href="about/manufacturing.html" class="btn-secondary inline-block">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 研发中心 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-flask text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">研发中心</h2>
+                        <p class="text-neutral-dark/70 mb-4">32项技术专利，专业的研发团队，持续创新的产品设计。</p>
+                        <a href="about/r-d.html" class="btn-secondary inline-block">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 认证与专利 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-certificate text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">认证与专利</h2>
+                        <p class="text-neutral-dark/70 mb-4">ISO9001认证，CE/FCC/ROHS资质，多项国际认证和技术专利。</p>
+                        <a href="about/certifications.html" class="btn-secondary inline-block">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 新闻动态 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-newspaper-o text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">新闻动态</h2>
+                        <p class="text-neutral-dark/70 mb-4">公司最新动态、产品发布信息和行业相关新闻。</p>
+                        <a href="about/news.html" class="btn-secondary inline-block">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 滚动动画
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

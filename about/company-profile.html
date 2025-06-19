@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司简介 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .timeline-item::before {
+                content: '';
+                @apply absolute left-0 top-0 h-full w-0.5 bg-primary/30;
+            }
+            .timeline-dot::before {
+                content: '';
+                @apply absolute -left-[9px] top-3 h-4 w-4 rounded-full bg-primary border-2 border-white;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../cs-aboutus.html" class="text-neutral-dark/70 hover:text-primary">关于Superfire</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">公司简介</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">公司简介</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        Superfire成立于2003年，是一家专注于专业照明设备研发、生产和销售的高新技术企业。经过20年的发展，我们已成为全球领先的照明解决方案提供商，产品远销120多个国家和地区。
+                    </p>
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        公司秉承"创新照明，点亮未来"的使命，始终坚持技术创新和品质至上的理念，拥有32项技术专利，通过ISO9001质量管理体系认证，产品符合CE、FCC、ROHS等多项国际标准。
+                    </p>
+                </div>
+
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold mb-8 flex items-center">
+                        <i class="fa fa-history text-primary mr-3"></i>发展历程
+                    </h2>
+                    <div class="relative pl-8 space-y-8">
+                        <div class="timeline-item relative">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold mb-2">2003年</h3>
+                            <p class="text-neutral-dark/70">公司在深圳成立，专注于手电筒研发生产</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold mb-2">2008年</h3>
+                            <p class="text-neutral-dark/70">扩大产品线，进军专业户外照明市场</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold mb-2">2013年</h3>
+                            <p class="text-neutral-dark/70">建立海外分公司，产品开始销往全球市场</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold mb-2">2018年</h3>
+                            <p class="text-neutral-dark/70">荣获国家级高新技术企业认证</p>
+                        </div>
+                        <div class="timeline-item relative">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold mb-2">2023年</h3>
+                            <p class="text-neutral-dark/70">年销售额突破5亿元，全球合作伙伴超过500家</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-neutral/30 rounded-xl p-8">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fa fa-lightbulb-o text-primary mr-3"></i>使命与愿景
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-primary">企业使命</h3>
+                            <p class="text-neutral-dark/80">通过创新照明技术，为全球用户提供安全、高效、环保的照明解决方案</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-primary">企业愿景</h3>
+                            <p class="text-neutral-dark/80">成为全球领先的专业照明品牌，引领行业技术创新与可持续发展</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 滚动动画
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

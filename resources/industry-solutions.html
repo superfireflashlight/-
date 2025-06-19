@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行业解决方案 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .solution-card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .case-item {
+                @apply border border-gray-100 rounded-lg p-4 hover:shadow-md transition-shadow;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../resources.html" class="text-neutral-dark/70 hover:text-primary">资源中心</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">行业解决方案</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">行业解决方案</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        Superfire针对不同行业的特殊需求，提供定制化的专业照明解决方案。我们结合先进的照明技术和丰富的行业经验，为各领域客户打造安全、高效、可靠的照明系统。
+                    </p>
+                </div>
+
+                <!-- Solution Categories -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    <!-- Security Solution -->
+                    <div class="solution-card">
+                        <div class="h-48 bg-primary/10 flex items-center justify-center">
+                            <i class="fa fa-shield text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-3">安防行业解决方案</h2>
+                            <p class="text-neutral-dark/70 mb-4">
+                                为安防监控、夜间巡逻和应急救援提供高亮度、长续航的专业照明设备，确保全天候安全监控和快速响应。
+                            </p>
+                            <ul class="space-y-2 mb-6 text-sm text-neutral-dark/70">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 红外夜视照明系统</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 移动巡逻照明方案</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 应急救援照明设备</li>
+                            </ul>
+                            <a href="solutions/security.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                查看方案详情
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Industrial Inspection Solution -->
+                    <div class="solution-card">
+                        <div class="h-48 bg-primary/10 flex items-center justify-center">
+                            <i class="fa fa-search text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-3">工业检测解决方案</h2>
+                            <p class="text-neutral-dark/70 mb-4">
+                                针对工业设备检测、管道巡查和精密仪器维护，提供定向照明和特种光源设备，提升检测精度和工作效率。
+                            </p>
+                            <ul class="space-y-2 mb-6 text-sm text-neutral-dark/70">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 精密检测定向照明</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 防爆照明系统</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 管道内窥镜照明</li>
+                            </ul>
+                            <a href="solutions/industrial-inspection.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                查看方案详情
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Construction Solution -->
+                    <div class="solution-card">
+                        <div class="h-48 bg-primary/10 flex items-center justify-center">
+                            <i class="fa fa-building text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-3">建筑工程解决方案</h2>
+                            <p class="text-neutral-dark/70 mb-4">
+                                为建筑施工、隧道工程和夜间作业提供强光照明和移动照明系统，确保施工安全和进度不受光线影响。
+                            </p>
+                            <ul class="space-y-2 mb-6 text-sm text-neutral-dark/70">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 大面积泛光照明</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 便携式移动照明</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 防水防尘照明设备</li>
+                            </ul>
+                            <a href="solutions/construction.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                查看方案详情
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mining Solution -->
+                    <div class="solution-card">
+                        <div class="h-48 bg-primary/10 flex items-center justify-center">
+                            <i class="fa fa-cubes text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-3">矿业开采解决方案</h2>
+                            <p class="text-neutral-dark/70 mb-4">
+                                专为矿山开采和地下作业设计的防爆照明设备，具备高可靠性和长使用寿命，适应恶劣工作环境。
+                            </p>
+                            <ul class="space-y-2 mb-6 text-sm text-neutral-dark/70">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 矿用隔爆型灯具</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 头戴式照明系统</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 应急逃生照明</li>
+                            </ul>
+                            <a href="solutions/mining.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                查看方案详情
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Outdoor Adventure Solution -->
+                    <div class="solution-card">
+                        <div class="h-48 bg-primary/10 flex items-center justify-center">
+                            <i class="fa fa-tree text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-3">户外探险解决方案</h2>
+                            <p class="text-neutral-dark/70 mb-4">
+                                为户外探险、露营和搜救行动提供轻量化、多功能的照明工具，满足各种复杂环境下的照明需求。
+                            </p>
+                            <ul class="space-y-2 mb-6 text-sm text-neutral-dark/70">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 多功能户外手电</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 营地照明系统</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 太阳能充电设备</li>
+                            </ul>
+                            <a href="solutions/outdoor.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                查看方案详情
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Railway Solution -->
+                    <div class="solution-card">
+                        <div class="h-48 bg-primary/10 flex items-center justify-center">
+                            <i class="fa fa-train text-6xl text-primary"></i>
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-3">铁路交通解决方案</h2>
+                            <p class="text-neutral-dark/70 mb-4">
+                                为铁路检修、信号维护和应急抢修提供专业照明设备，确保铁路运输安全和高效运营。
+                            </p>
+                            <ul class="space-y-2 mb-6 text-sm text-neutral-dark/70">
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 轨道检测照明</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 信号维护灯具</li>
+                                <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i> 应急抢修照明</li>
+                            </ul>
+                            <a href="solutions/railway.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                                查看方案详情
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case Studies -->
+                <div class="bg-neutral/50 rounded-2xl p-8 mb-12">
+                    <h2 class="text-2xl font-bold mb-6">成功案例</h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="case-item">
+                            <div class="flex items-start">
+                                <div class="text-primary text-3xl mr-4 mt-1"><i class="fa fa-building-o"></i></div>
+                                <div>
+                                    <h3 class="font-bold mb-2">某大型钢铁厂照明改造项目</h3>
+                                    <p class="text-sm text-neutral-dark/70 mb-3">
+                                        为某钢铁企业的生产车间和厂区道路进行全面照明改造，采用高效节能LED照明系统，照明效果提升60%，年节省电费约80万元。
+                                    </p>
+                                    <a href="cases/steel-plant.html" class="text-primary text-sm font-medium hover:underline">查看完整案例 <i class="fa fa-angle-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-item">
+                            <div class="flex items-start">
+                                <div class="text-primary text-3xl mr-4 mt-1"><i class="fa fa-road"></i></div>
+                                <div>
+                                    <h3 class="font-bold mb-2">高速公路隧道应急照明系统</h3>
+                                    <p class="text-sm text-neutral-dark/70 mb-3">
+                                        为某高速公路隧道群提供智能应急照明系统，实现毫秒级应急切换，保障隧道行车安全，系统稳定性达99.99%。
+                                    </p>
+                                    <a href="cases/highway-tunnel.html" class="text-primary text-sm font-medium hover:underline">查看完整案例 <i class="fa fa-angle-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-item">
+                            <div class="flex items-start">
+                                <div class="text-primary text-3xl mr-4 mt-1"><i class="fa fa-shield"></i></div>
+                                <div>
+                                    <h3 class="font-bold mb-2">城市安防监控照明项目</h3>
+                                    <p class="text-sm text-neutral-dark/70 mb-3">
+                                        为某一线城市安防监控系统提供配套红外照明设备，实现24小时高清监控覆盖，夜间识别距离提升至150米。
+                                    </p>
+                                    <a href="cases/city-security.html" class="text-primary text-sm font-medium hover:underline">查看完整案例 <i class="fa fa-angle-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="case-item">
+                            <div class="flex items-start">
+                                <div class="text-primary text-3xl mr-4 mt-1"><i class="fa fa-cubes"></i></div>
+                                <div>
+                                    <h3 class="font-bold mb-2">大型矿山照明系统升级</h3>
+                                    <p class="text-sm text-neutral-dark/70 mb-3">
+                                        为某大型露天矿场提供防爆照明系统升级服务，替换传统金卤灯为LED防爆灯具，寿命延长5倍，维护成本降低70%。
+                                    </p>
+                                    <a href="cases/mine-upgrade.html" class="text-primary text-sm font-medium hover:underline">查看完整案例 <i class="fa fa-angle-right ml-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="case-studies.html" class="inline-block border border-primary text-primary hover:bg-primary hover:text-white font-medium py-2 px-6 rounded-lg transition-all duration-300">
+                            查看更多案例
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solution Consultation -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 text-center">
+                    <h2 class="text-2xl font-bold mb-4">需要定制行业解决方案？</h2>
+                    <p class="text-neutral-dark/70 mb-8 max-w-2xl mx-auto">
+                        我们的专业团队将根据您的具体需求，为您量身定制最适合的照明解决方案，提供从方案设计到产品供应的一站式服务。
+                    </p>
+                    <a href="../contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                        <i class="fa fa-comments mr-2"></i> 联系解决方案顾问
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Scroll Animation
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

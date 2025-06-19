@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下载中心 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .download-card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg border border-gray-100;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../support.html" class="text-neutral-dark/70 hover:text-primary">支持与服务</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">下载中心</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">下载中心</h1>
+                <p class="text-lg text-neutral-dark/80 mb-12">
+                    在这里您可以找到Superfire产品的技术文档、驱动程序、固件更新和其他相关资源。所有文件均经过安全检测，请放心下载。
+                </p>
+
+                <!-- Download Categories -->
+                <div class="mb-12">
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <button class="download-tab active bg-primary text-white px-6 py-2 rounded-lg font-medium">全部资源</button>
+                        <button class="download-tab bg-neutral text-neutral-dark/70 hover:bg-primary/10 px-6 py-2 rounded-lg font-medium">技术文档</button>
+                        <button class="download-tab bg-neutral text-neutral-dark/70 hover:bg-primary/10 px-6 py-2 rounded-lg font-medium">驱动程序</button>
+                        <button class="download-tab bg-neutral text-neutral-dark/70 hover:bg-primary/10 px-6 py-2 rounded-lg font-medium">固件更新</button>
+                        <button class="download-tab bg-neutral text-neutral-dark/70 hover:bg-primary/10 px-6 py-2 rounded-lg font-medium">宣传资料</button>
+                    </div>
+
+                    <!-- Technical Documents -->
+                    <div class="download-section mb-12">
+                        <h2 class="text-xl font-bold mb-6 flex items-center">
+                            <i class="fa fa-file-text-o text-primary mr-3 text-xl"></i>技术文档
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="download-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">Superfire全系列产品手册</h3>
+                                        <p class="text-sm text-neutral-dark/60">PDF, 24.5 MB, 2023-10-15</p>
+                                    </div>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded">最新版</span>
+                                </div>
+                                <p class="text-neutral-dark/70 text-sm mb-4">包含Superfire所有产品线的详细规格、使用说明和维护指南。</p>
+                                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                    <i class="fa fa-download mr-2"></i> 立即下载
+                                </a>
+                            </div>
+
+                            <div class="download-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">工业照明解决方案白皮书</h3>
+                                        <p class="text-sm text-neutral-dark/60">PDF, 8.2 MB, 2023-09-28</p>
+                                    </div>
+                                    <span class="bg-neutral text-neutral-dark/50 text-xs px-2 py-1 rounded">v1.2</span>
+                                </div>
+                                <p class="text-neutral-dark/70 text-sm mb-4">分析工业照明应用场景及Superfire专业解决方案。</p>
+                                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                    <i class="fa fa-download mr-2"></i> 立即下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drivers -->
+                    <div class="download-section mb-12">
+                        <h2 class="text-xl font-bold mb-6 flex items-center">
+                            <i class="fa fa-microchip text-primary mr-3 text-xl"></i>驱动程序
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="download-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">SF-Controller软件驱动</h3>
+                                        <p class="text-sm text-neutral-dark/60">ZIP, 12.8 MB, 2023-11-05</p>
+                                    </div>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded">最新版</span>
+                                </div>
+                                <p class="text-neutral-dark/70 text-sm mb-4">适用于Windows系统的SF-Controller智能控制软件驱动程序。</p>
+                                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                    <i class="fa fa-download mr-2"></i> 立即下载
+                                </a>
+                            </div>
+
+                            <div class="download-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">无线充电底座驱动</h3>
+                                        <p class="text-sm text-neutral-dark/60">ZIP, 5.4 MB, 2023-08-12</p>
+                                    </div>
+                                    <span class="bg-neutral text-neutral-dark/50 text-xs px-2 py-1 rounded">v2.1</span>
+                                </div>
+                                <p class="text-neutral-dark/70 text-sm mb-4">Superfire无线充电底座的Windows和Mac驱动程序。</p>
+                                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                    <i class="fa fa-download mr-2"></i> 立即下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Firmware Updates -->
+                    <div class="download-section mb-12">
+                        <h2 class="text-xl font-bold mb-6 flex items-center">
+                            <i class="fa fa-refresh text-primary mr-3 text-xl"></i>固件更新
+                        </h2>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="download-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">SF-9000系列固件v3.2.1</h3>
+                                        <p class="text-sm text-neutral-dark/60">BIN, 1.2 MB, 2023-11-18</p>
+                                    </div>
+                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded">最新版</span>
+                                </div>
+                                <p class="text-neutral-dark/70 text-sm mb-4">优化电池管理系统，提升低光模式稳定性，新增智能温控功能。</p>
+                                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                    <i class="fa fa-download mr-2"></i> 立即下载
+                                </a>
+                            </div>
+
+                            <div class="download-card p-6">
+                                <div class="flex justify-between items-start mb-4">
+                                    <div>
+                                        <h3 class="font-bold text-lg mb-1">SF-500系列固件v2.5.0</h3>
+                                        <p class="text-sm text-neutral-dark/60">BIN, 980 KB, 2023-10-22</p>
+                                    </div>
+                                    <span class="bg-neutral text-neutral-dark/50 text-xs px-2 py-1 rounded">v2.5</span>
+                                </div>
+                                <p class="text-neutral-dark/70 text-sm mb-4">改进USB-C充电兼容性，修复部分场景下的闪烁问题。</p>
+                                <a href="#" class="inline-flex items-center text-primary hover:text-primary/80 font-medium">
+                                    <i class="fa fa-download mr-2"></i> 立即下载
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download Help -->
+                <div class="bg-neutral/50 rounded-2xl p-8">
+                    <h2 class="text-xl font-bold mb-4">下载帮助</h2>
+                    <ul class="space-y-3 text-neutral-dark/70">
+                        <li class="flex items-start">
+                            <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                            <span>所有下载资源均经过安全检测，建议使用官方渠道获取以确保文件完整性。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                            <span>固件更新前请仔细阅读更新说明，错误操作可能导致设备无法正常工作。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-info-circle text-primary mt-1 mr-3"></i>
+                            <span>如遇下载问题或需要旧版本资源，请联系技术支持：support@superfire.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Download Tab Functionality
+        document.querySelectorAll('.download-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.download-tab').forEach(t => {
+                    t.classList.remove('active', 'bg-primary', 'text-white');
+                    t.classList.add('bg-neutral', 'text-neutral-dark/70', 'hover:bg-primary/10');
+                });
+                // Add active class to clicked tab
+                this.classList.add('active', 'bg-primary', 'text-white');
+                this.classList.remove('bg-neutral', 'text-neutral-dark/70', 'hover:bg-primary/10');
+                // In a real implementation, you would show/hide content sections here
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选购指南 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .guide-card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+            }
+            .feature-item {
+                @apply flex items-start mb-4;
+            }
+            .feature-icon {
+                @apply text-primary mr-3 mt-1 flex-shrink-0;
+            }
+            .comparison-table th,
+            .comparison-table td {
+                @apply border border-gray-200 px-4 py-3 text-sm;
+            }
+            .comparison-table th {
+                @apply bg-neutral font-medium;
+            }
+            .comparison-table tr:nth-child(even) {
+                @apply bg-gray-50;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../resources.html" class="text-neutral-dark/70 hover:text-primary">资源中心</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">选购指南</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">手电筒选购指南</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        选择合适的手电筒需要考虑多种因素，包括使用场景、亮度需求、电池类型和特殊功能等。本指南将帮助您了解关键参数和选购要点，找到最适合您需求的Superfire手电筒产品。
+                    </p>
+                </div>
+
+                <!-- Buying Guide Sections -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="guide-card p-8">
+                        <div class="text-primary text-3xl mb-6"><i class="fa fa-lightbulb-o"></i></div>
+                        <h2 class="text-2xl font-bold mb-4">如何选择合适的手电筒</h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 flex items-center">
+                                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">1</span>
+                                    确定使用场景
+                                </h3>
+                                <p class="text-neutral-dark/70 ml-8">
+                                    不同场景需要不同类型的手电筒。家用、户外、专业工作或战术应用各有特点，选择时需明确主要使用场景。
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 flex items-center">
+                                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">2</span>
+                                    了解亮度需求
+                                </h3>
+                                <p class="text-neutral-dark/70 ml-8">
+                                    亮度以流明(lumens)为单位，从几十流明到上万流明不等。日常家用通常50-300流明，户外探险可能需要500-2000流明。
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 flex items-center">
+                                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">3</span>
+                                    考虑电池类型
+                                </h3>
+                                <p class="text-neutral-dark/70 ml-8">
+                                    可充电锂电池(18650, 21700等)容量大、重复使用成本低；AA/AAA电池更换方便；内置锂电池充电便捷。
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2 flex items-center">
+                                    <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">4</span>
+                                    关注特殊功能
+                                </h3>
+                                <p class="text-neutral-dark/70 ml-8">
+                                    根据需求选择防水等级、变焦功能、爆闪模式、USB充电、战术尾按等特殊功能，提升使用体验和适用性。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="guide-card p-8">
+                        <div class="text-primary text-3xl mb-6"><i class="fa fa-list-ol"></i></div>
+                        <h2 class="text-2xl font-bold mb-4">关键参数解析</h2>
+                        <div class="space-y-4">
+                            <div class="feature-item">
+                                <i class="fa fa-bolt feature-icon"></i>
+                                <div>
+                                    <strong>亮度(Lumens)</strong>
+                                    <p class="text-neutral-dark/70 text-sm">光源发出的总光通量，数值越高亮度越强</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa fa-arrows-h feature-icon"></i>
+                                <div>
+                                    <strong>射程(Meters)</strong>
+                                    <p class="text-neutral-dark/70 text-sm">光束可照射的最远距离，与反光杯设计密切相关</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa fa-clock-o feature-icon"></i>
+                                <div>
+                                    <strong>续航时间(Hours)</strong>
+                                    <p class="text-neutral-dark/70 text-sm">不同亮度档位下可持续照明的时间，通常低亮度档续航更长</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa fa-tint feature-icon"></i>
+                                <div>
+                                    <strong>防水等级(IPX)</strong>
+                                    <p class="text-neutral-dark/70 text-sm">IPX4防泼溅，IPX6可抵御强烈喷水，IPX8可水下使用</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa fa-shield feature-icon"></i>
+                                <div>
+                                    <strong>抗摔高度(Meters)</strong>
+                                    <p class="text-neutral-dark/70 text-sm">从指定高度跌落仍能正常工作，反映产品耐用性</p>
+                                </div>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fa fa-battery-full feature-icon"></i>
+                                <div>
+                                    <strong>电池容量(mAh)</strong>
+                                    <p class="text-neutral-dark/70 text-sm">电池存储的电荷量，容量越大通常续航越长</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Comparison -->
+                <h2 class="text-2xl font-bold mb-6">热门产品对比</h2>
+                <div class="overflow-x-auto guide-card mb-16">
+                    <table class="w-full comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="text-left">产品型号</th>
+                                <th class="text-center">亮度范围</th>
+                                <th class="text-center">最大射程</th>
+                                <th class="text-center">电池类型</th>
+                                <th class="text-center">防水等级</th>
+                                <th class="text-center">主要特点</th>
+                                <th class="text-center">适用场景</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-medium">SF-300</td>
+                                <td class="text-center">50-1000流明</td>
+                                <td class="text-center">200米</td>
+                                <td class="text-center">18650可充电</td>
+                                <td class="text-center">IPX6</td>
+                                <td class="text-center">变焦、USB直充</td>
+                                <td class="text-center">户外、家用</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">SF-500</td>
+                                <td class="text-center">100-2000流明</td>
+                                <td class="text-center">300米</td>
+                                <td class="text-center">21700可充电</td>
+                                <td class="text-center">IPX8</td>
+                                <td class="text-center">强光、爆闪、长续航</td>
+                                <td class="text-center">探险、搜救</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">SF-700</td>
+                                <td class="text-center">200-3000流明</td>
+                                <td class="text-center">500米</td>
+                                <td class="text-center">21700×2可充电</td>
+                                <td class="text-center">IPX6</td>
+                                <td class="text-center">战术尾按、攻击头</td>
+                                <td class="text-center">战术、安保</td>
+                            </tr>
+                            <tr>
+                                <td class="font-medium">SF-1000</td>
+                                <td class="text-center">500-5000流明</td>
+                                <td class="text-center">800米</td>
+                                <td class="text-center">21700×4可充电</td>
+                                <td class="text-center">IPX6</td>
+                                <td class="text-center">超强光、散热系统</td>
+                                <td class="text-center">专业搜救、户外作业</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- FAQ Section -->
+                <h2 class="text-2xl font-bold mb-6">常见问题</h2>
+                <div class="space-y-6 mb-16">
+                    <div class="guide-card p-6">
+                        <h3 class="font-bold text-lg mb-2">流明值越高越好吗？</h3>
+                        <p class="text-neutral-dark/70">
+                            不一定。高流明意味着更高亮度和更远射程，但也会消耗更多电量并产生更多热量。选择适合您使用场景的流明值更为重要。日常家用50-300流明足够，户外探险可考虑500-2000流明。
+                        </p>
+                    </div>
+                    <div class="guide-card p-6">
+                        <h3 class="font-bold text-lg mb-2">如何延长手电筒电池寿命？</h3>
+                        <p class="text-neutral-dark/70">
+                            1. 避免长时间使用最高亮度档；2. 不使用时取出电池(尤其是碱性电池)；3. 定期为锂电池充电，避免完全放电；4. 存放于干燥阴凉处；5. 按照说明书正确充电，避免过充。
+                        </p>
+                    </div>
+                    <div class="guide-card p-6">
+                        <h3 class="font-bold text-lg mb-2">防水手电筒可以在任何水下环境使用吗？</h3>
+                        <p class="text-neutral-dark/70">
+                            不同防水等级适用不同环境。IPX4仅防泼溅，不能浸入水中；IPX7可在1米深水中短时间使用；IPX8可在更深水下使用(具体深度和时间参考产品说明)。使用前请确认产品防水等级，避免超出范围使用。
+                        </p>
+                    </div>
+                    <div class="guide-card p-6">
+                        <h3 class="font-bold text-lg mb-2">LED手电筒的使用寿命有多长？</h3>
+                        <p class="text-neutral-dark/70">
+                            Superfire手电筒使用高品质LED，理论寿命可达50,000小时以上(约5.7年持续使用)。实际使用寿命受使用频率、亮度设置和散热情况影响。正常使用情况下，LED通常不会是首先需要更换的部件。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Recommendation Tool -->
+                <div class="bg-primary/10 rounded-2xl p-8">
+                    <h2 class="text-2xl font-bold mb-6 text-center">找不到合适的产品？</h2>
+                    <p class="text-neutral-dark/70 mb-8 text-center max-w-2xl mx-auto">
+                        告诉我们您的具体需求，我们的产品专家将为您推荐最适合的手电筒解决方案
+                    </p>
+                    <div class="max-w-md mx-auto">
+                        <a href="../contact.html" class="block w-full bg-primary hover:bg-primary/90 text-white font-medium py-4 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg text-center">
+                            联系产品专家获取推荐
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Scroll Animation
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

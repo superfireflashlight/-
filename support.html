@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支持与服务 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .btn-primary {
+                @apply bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-md font-medium hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+            }
+            .btn-secondary {
+                @apply bg-white text-primary border border-primary px-6 py-3 rounded-md font-medium hover:bg-primary/5 transition-colors duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-neutral/30">
+        <div class="container mx-auto px-4">
+            <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold mb-8 text-center">支持与服务</h1>
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-lg text-neutral-dark/80">
+                    我们提供全方位的技术支持和售后服务，确保您在使用Superfire产品时获得最佳体验。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 技术支持 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-headphones text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">技术支持</h2>
+                        <p class="text-neutral-dark/70 mb-4">专业工程师团队提供技术咨询和解决方案。</p>
+                        <a href="support/technical.html" class="btn-secondary inline-block">
+                            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 售后服务 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-wrench text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">售后服务</h2>
+                        <p class="text-neutral-dark/70 mb-4">完善的保修政策和产品维修服务。</p>
+                        <a href="support/warranty.html" class="btn-secondary inline-block">
+                            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 常见问题 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-question-circle text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">常见问题</h2>
+                        <p class="text-neutral-dark/70 mb-4">产品使用和购买相关的常见问题解答。</p>
+                        <a href="support/faq.html" class="btn-secondary inline-block">
+                            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 下载中心 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 bg-primary/10 flex items-center justify-center">
+                        <i class="fa fa-download text-5xl text-primary"></i>
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-bold mb-3">下载中心</h2>
+                        <p class="text-neutral-dark/70 mb-4">产品手册、驱动程序和相关资料下载。</p>
+                        <a href="support/downloads.html" class="btn-secondary inline-block">
+                            了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 滚动动画
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

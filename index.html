@@ -24,83 +24,18 @@
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .card-hover {
-                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
-            }
-            .btn-primary {
-                @apply bg-primary text-white px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:shadow-md;
-            }
-            .btn-secondary {
-                @apply bg-white text-primary border border-primary px-6 py-3 rounded-md font-medium transition-all duration-300 hover:bg-neutral hover:shadow-md;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="font-inter text-neutral-dark">
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-sm">
-        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#" class="flex items-center">
-                <img src="https://www.superfire.com/templates/web/images/logo.png" alt="Superfire Logo" class="h-10">
-            </a>
-            
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
-                <div class="relative group">
-                    <a href="products.html" class="font-medium hover:text-accent transition-colors flex items-center">
-                        Products
-                        <i class="fa fa-chevron-down ml-1 text-xs"></i>
-                    </a>
-                    <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Accessories</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <a href="#" class="font-medium hover:text-accent transition-colors flex items-center">
-                        B2B Solutions
-                        <i class="fa fa-chevron-down ml-1 text-xs"></i>
-                    </a>
-                    <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
-                        <div class="py-1">
-                            <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
-                            <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
-                            <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
-                            <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
-                <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
-                <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
-            </div>
-            
-            <!-- User Actions -->
-            <div class="flex items-center space-x-4">
-                <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
-                <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
-                <div class="relative">
-                    <a href="#" class="text-lg hover:text-accent transition-colors">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
-                    </a>
-                </div>
-                <button class="md:hidden text-lg">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
-        </nav>
-    </header>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
 
     <main>
         <!-- Hero Section -->
@@ -623,100 +558,14 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-neutral-dark text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <a href="#" class="inline-block mb-6">
-                        <img src="https://picsum.photos/200/80?random=12" alt="Superfire Logo" class="h-10">
-                    </a>
-                    <p class="text-white/70 mb-6">
-                        Superfire is a leading manufacturer of high-performance lighting solutions, serving businesses and consumers worldwide with innovative products and exceptional service.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-white/70 hover:text-white transition-colors">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-white/70 hover:text-white transition-colors">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-white/70 hover:text-white transition-colors">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-white/70 hover:text-white transition-colors">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Home</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">OEM/ODM Services</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Wholesale</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Enterprise Solutions</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Promotional Gifts</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Support</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Shipping Policy</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Return Policy</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Warranty Information</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-white/70 hover:text-white transition-colors">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-6">Contact Us</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fa fa-map-marker mt-1 mr-3 text-accent"></i>
-                            <span class="text-white/70">123 Lighting Street, Industrial Park, Shenzhen, China 518000</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-phone mt-1 mr-3 text-accent"></i>
-                            <span class="text-white/70">+86 755 1234 5678</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa fa-envelope mt-1 mr-3 text-accent"></i>
-                            <span class="text-white/70">info@superfire.com</span>
-                        </li>
-                    </ul>
-                    <div class="mt-6">
-                        <h4 class="text-base font-medium mb-3">Subscribe to our newsletter</h4>
-                        <div class="flex">
-                            <input type="email" placeholder="Your email address" class="bg-white/10 border border-white/20 rounded-l-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-accent">
-                            <button class="bg-accent text-white px-4 py-2 rounded-r-md hover:bg-accent/90 transition-colors">
-                                <i class="fa fa-paper-plane"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-white/10 pt-8">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-white/70 text-sm mb-4 md:mb-0">
-                        &copy; 2025 Superfire. All rights reserved.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Privacy Policy</a>
-                        <a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Terms of Service</a>
-                        <a href="#" class="text-white/70 hover:text-white transition-colors text-sm">Cookie Policy</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 
     <script>
         // Scroll animation for header

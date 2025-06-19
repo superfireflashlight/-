@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生产实力 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .stat-card {
+                @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../cs-aboutus.html" class="text-neutral-dark/70 hover:text-primary">关于Superfire</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">生产实力</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">生产实力</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        Superfire拥有现代化生产基地和先进的制造设备，致力于为客户提供高品质的照明产品。我们的生产线采用自动化技术，结合严格的质量控制流程，确保每一件产品都符合国际标准。
+                    </p>
+                </div>
+
+                <!-- Production Statistics -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="stat-card text-center">
+                        <div class="text-4xl font-bold text-primary mb-2">10+</div>
+                        <div class="text-neutral-dark/70">自动化生产线</div>
+                    </div>
+                    <div class="stat-card text-center">
+                        <div class="text-4xl font-bold text-primary mb-2">50万+</div>
+                        <div class="text-neutral-dark/70">月产能(件)</div>
+                    </div>
+                    <div class="stat-card text-center">
+                        <div class="text-4xl font-bold text-primary mb-2">99.8%</div>
+                        <div class="text-neutral-dark/70">产品合格率</div>
+                    </div>
+                </div>
+
+                <!-- Production Facilities -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fa fa-building-o text-primary mr-3"></i>生产设施
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-neutral/30 rounded-xl p-6">
+                            <h3 class="text-xl font-semibold mb-3">现代化厂房</h3>
+                            <p class="text-neutral-dark/70 mb-4">占地20,000平方米的标准化生产车间，配备恒温恒湿控制系统，确保生产环境稳定。</p>
+                            <ul class="space-y-2 text-neutral-dark/70">
+                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>无尘组装车间</li>
+                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>自动化仓储系统</li>
+                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>智能物流配送中心</li>
+                            </ul>
+                        </div>
+                        <div class="bg-neutral/30 rounded-xl p-6">
+                            <h3 class="text-xl font-semibold mb-3">先进设备</h3>
+                            <p class="text-neutral-dark/70 mb-4">引进德国、日本先进生产设备，实现关键工序全自动化，提高生产效率和产品一致性。</p>
+                            <ul class="space-y-2 text-neutral-dark/70">
+                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>CNC精密加工中心</li>
+                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>SMT贴片生产线</li>
+                                <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>自动化组装机器人</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Control -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fa fa-check-square-o text-primary mr-3"></i>质量控制
+                    </h2>
+                    <div class="bg-neutral/30 rounded-xl p-8">
+                        <p class="text-neutral-dark/80 mb-6">我们建立了从原材料采购到成品出厂的全流程质量控制体系，通过多项国际认证，确保产品质量达到行业领先水平。</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <i class="fa fa-certificate text-3xl text-primary mb-2"></i>
+                                <div class="text-sm">ISO9001</div>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <i class="fa fa-certificate text-3xl text-primary mb-2"></i>
+                                <div class="text-sm">CE认证</div>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <i class="fa fa-certificate text-3xl text-primary mb-2"></i>
+                                <div class="text-sm">FCC认证</div>
+                            </div>
+                            <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                                <i class="fa fa-certificate text-3xl text-primary mb-2"></i>
+                                <div class="text-sm">ROHS认证</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 滚动动画
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

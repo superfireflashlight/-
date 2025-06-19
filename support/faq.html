@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见问题 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .faq-card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../support.html" class="text-neutral-dark/70 hover:text-primary">支持与服务</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">常见问题</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">常见问题</h1>
+                <p class="text-lg text-neutral-dark/80 mb-12">
+                    我们收集了用户最常咨询的问题，如果您有其他疑问，欢迎联系我们的客服团队获取帮助。
+                </p>
+
+                <!-- FAQ Categories -->
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <button class="category-tag bg-primary text-white">全部问题</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">产品使用</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">保修服务</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">技术支持</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">购买咨询</button>
+                </div>
+
+                <!-- FAQ Items -->
+                <div class="space-y-6 mb-16">
+                    <div class="faq-item border border-gray-100 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium" onclick="toggleFaq(this)">
+                            <span>如何选择适合我的手电筒产品？</span>
+                            <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-neutral-dark/70 border-t border-gray-100">
+                            <p>选择手电筒时应考虑使用场景、亮度需求、续航时间和特殊功能。户外探险建议选择高亮度、长续航的型号；工业检测则需要注重耐用性和防爆功能。您可以参考我们的产品选型指南或联系客服获取专业建议。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-gray-100 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium" onclick="toggleFaq(this)">
+                            <span>产品保修期是多久？如何申请保修服务？</span>
+                            <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-neutral-dark/70 border-t border-gray-100">
+                            <p>Superfire产品保修期为2年，部分核心部件享受5年保修。申请保修服务请登录官网售后服务页面，填写产品信息和故障描述，或直接联系客服热线400-888-9999。保修时请提供购买凭证和产品序列号。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-gray-100 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium" onclick="toggleFaq(this)">
+                            <span>如何保养和维护手电筒以延长使用寿命？</span>
+                            <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-neutral-dark/70 border-t border-gray-100">
+                            <p>定期清洁手电筒外壳和镜片，保持螺纹处清洁并涂抹专用润滑脂；避免长时间满功率使用导致过热；不使用时取出电池存放于阴凉干燥处；避免摔落和剧烈撞击。详细保养方法请参考产品维护手册。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-gray-100 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium" onclick="toggleFaq(this)">
+                            <span>可以使用第三方电池或充电器吗？</span>
+                            <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-neutral-dark/70 border-t border-gray-100">
+                            <p>我们建议使用Superfire原装电池和充电器以确保最佳性能和安全性。使用第三方配件可能导致充电故障、电池损坏甚至安全隐患，此类情况不在保修范围内。如需要更换配件，请通过官方渠道购买。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item border border-gray-100 rounded-xl overflow-hidden">
+                        <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium" onclick="toggleFaq(this)">
+                            <span>产品防水等级是什么意思？如何正确理解IPXX等级？</span>
+                            <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer hidden p-6 pt-0 text-neutral-dark/70 border-t border-gray-100">
+                            <p>IP（Ingress Protection）等级由两个数字组成，第一个数字表示防尘等级（0-6级），第二个数字表示防水等级（0-9K级）。例如IP68表示完全防尘且可在1.5米深水中长时间使用。请注意，防水性能可能会随着使用时间和磨损而下降，建议定期检查密封圈状态。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Contact -->
+                <div class="bg-primary/10 rounded-2xl p-8 text-center">
+                    <h2 class="text-2xl font-bold mb-4">还有其他问题？</h2>
+                    <p class="text-neutral-dark/70 mb-6 max-w-2xl mx-auto">
+                        如果您的问题没有在常见问题中找到答案，欢迎联系我们的客服团队，我们将竭诚为您提供帮助。
+                    </p>
+                    <a href="../contact.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                        <i class="fa fa-comments mr-2"></i> 联系客服团队
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+        }
+    </script>
+</body>
+</html>

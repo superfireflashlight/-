@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>售后服务 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .service-card {
+                @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .process-step {
+                @apply relative pl-12 pb-8 last:pb-0;
+            }
+            .process-step::before {
+                content: '';
+                @apply absolute left-0 top-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold;
+            }
+            .process-step::after {
+                content: '';
+                @apply absolute left-4 top-8 bottom-0 w-0.5 bg-primary/30;
+            }
+            .process-step:last-child::after {
+                @apply hidden;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../support.html" class="text-neutral-dark/70 hover:text-primary">支持与服务</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">售后服务</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">售后服务</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        Superfire致力于为每一位客户提供专业、高效的售后服务保障。我们建立了完善的售后体系，包括产品保修、维修服务、退换货政策等，确保您在使用过程中无后顾之忧。
+                    </p>
+                </div>
+
+                <!-- Service Hotline -->
+                <div class="bg-primary/10 rounded-2xl p-8 mb-12 text-center">
+                    <div class="text-primary text-4xl mb-4"><i class="fa fa-phone"></i></div>
+                    <h2 class="text-2xl font-bold mb-2">7×24小时售后服务热线</h2>
+                    <p class="text-3xl font-bold text-primary mb-4">400-888-9999</p>
+                    <p class="text-neutral-dark/70">专业客服团队随时为您解答疑问，处理售后问题</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Warranty Policy -->
+                    <div class="service-card">
+                        <div class="text-primary text-4xl mb-4"><i class="fa fa-shield"></i></div>
+                        <h2 class="text-xl font-bold mb-3">保修政策</h2>
+                        <ul class="space-y-3 text-neutral-dark/70 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>所有Superfire产品享受2年免费保修服务，核心部件（如LED、电池）享受5年保修</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>保修期自产品购买之日起计算，需提供有效购买凭证</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>非人为损坏的性能故障，免费维修或更换零部件</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-times-circle text-red-500 mt-1 mr-2"></i>
+                                <span>不保修范围：人为损坏、不当使用、自行拆解、自然灾害等不可抗力因素</span>
+                            </li>
+                        </ul>
+                        <a href="warranty-policy.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                            查看完整保修条款 <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+
+                    <!-- Return & Exchange Policy -->
+                    <div class="service-card">
+                        <div class="text-primary text-4xl mb-4"><i class="fa fa-refresh"></i></div>
+                        <h2 class="text-xl font-bold mb-3">退换货政策</h2>
+                        <ul class="space-y-3 text-neutral-dark/70 mb-6">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>产品自购买之日起7天内，在不影响二次销售的情况下可无理由退货</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>15天内产品出现性能故障，可选择换货或维修服务</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>退换货需提供完整包装、附件、购买凭证及产品完好状态</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-info-circle text-blue-500 mt-1 mr-2"></i>
+                                <span>特殊定制产品不支持无理由退换货，具体请咨询客服</span>
+                            </li>
+                        </ul>
+                        <a href="return-policy.html" class="text-primary font-medium hover:underline inline-flex items-center">
+                            查看详细退换货流程 <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Process -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 mb-12">
+                    <h2 class="text-2xl font-bold mb-8 text-center">售后服务流程</h2>
+                    <div class="max-w-3xl mx-auto">
+                        <div class="process-step" style="counter-reset: step 1;">
+                            <h3 class="text-lg font-bold mb-2">问题反馈</h3>
+                            <p class="text-neutral-dark/70">通过售后服务热线、在线表单或邮件联系我们，详细描述产品问题及相关信息</p>
+                        </div>
+                        <div class="process-step" style="counter-reset: step 2;">
+                            <h3 class="text-lg font-bold mb-2">技术诊断</h3>
+                            <p class="text-neutral-dark/70">客服人员或技术工程师将对问题进行初步诊断，提供解决方案或指导</p>
+                        </div>
+                        <div class="process-step" style="counter-reset: step 3;">
+                            <h3 class="text-lg font-bold mb-2">服务确认</h3>
+                            <p class="text-neutral-dark/70">根据诊断结果，确认维修、换货或退货服务方式及相关事宜</p>
+                        </div>
+                        <div class="process-step" style="counter-reset: step 4;">
+                            <h3 class="text-lg font-bold mb-2">产品寄送</h3>
+                            <p class="text-neutral-dark/70">如需维修，按照指引将产品寄送至指定服务中心（保修期内免运费）</p>
+                        </div>
+                        <div class="process-step" style="counter-reset: step 5;">
+                            <h3 class="text-lg font-bold mb-2">处理与返还</h3>
+                            <p class="text-neutral-dark/70">专业技术人员进行维修处理，完成后将产品寄回给您</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Network -->
+                <div class="mb-12">
+                    <h2 class="text-2xl font-bold mb-6">服务网络</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="text-center p-4 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+                            <div class="text-primary text-2xl mb-2"><i class="fa fa-map-marker"></i></div>
+                            <h3 class="font-medium mb-1">华北服务中心</h3>
+                            <p class="text-sm text-neutral-dark/70">北京市朝阳区XX路XX号</p>
+                        </div>
+                        <div class="text-center p-4 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+                            <div class="text-primary text-2xl mb-2"><i class="fa fa-map-marker"></i></div>
+                            <h3 class="font-medium mb-1">华东服务中心</h3>
+                            <p class="text-sm text-neutral-dark/70">上海市浦东新区XX路XX号</p>
+                        </div>
+                        <div class="text-center p-4 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+                            <div class="text-primary text-2xl mb-2"><i class="fa fa-map-marker"></i></div>
+                            <h3 class="font-medium mb-1">华南服务中心</h3>
+                            <p class="text-sm text-neutral-dark/70">广东省深圳市南山区XX路XX号</p>
+                        </div>
+                        <div class="text-center p-4 border border-gray-100 rounded-lg hover:shadow-md transition-shadow">
+                            <div class="text-primary text-2xl mb-2"><i class="fa fa-map-marker"></i></div>
+                            <h3 class="font-medium mb-1">西部服务中心</h3>
+                            <p class="text-sm text-neutral-dark/70">四川省成都市高新区XX路XX号</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Scroll Animation
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

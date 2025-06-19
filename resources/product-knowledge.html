@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品知识库 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .knowledge-card {
+                @apply bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .category-tag {
+                @apply inline-block px-3 py-1 text-xs font-medium rounded-full mr-2 mb-2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../resources.html" class="text-neutral-dark/70 hover:text-primary">资源中心</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">产品知识库</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">产品知识库</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        探索Superfire产品的专业知识、技术解析和实用技巧。我们的知识库涵盖手电筒工作原理、LED技术应用、电池保养维护等内容，助您深入了解和充分利用我们的产品。
+                    </p>
+                </div>
+
+                <!-- Knowledge Categories -->
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <button class="category-tag bg-primary text-white">全部</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">产品原理</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">LED技术</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">电池知识</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">使用技巧</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">维护保养</button>
+                    <button class="category-tag bg-neutral text-neutral-dark/70 hover:bg-primary/10">故障排除</button>
+                </div>
+
+                <!-- Featured Articles -->
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="knowledge-card md:col-span-2">
+                        <div class="md:flex">
+                            <div class="md:w-2/5 bg-primary/10 flex items-center justify-center p-8">
+                                <i class="fa fa-lightbulb-o text-8xl text-primary"></i>
+                            </div>
+                            <div class="md:w-3/5 p-8">
+                                <span class="category-tag bg-primary/10 text-primary">深度解析</span>
+                                <h2 class="text-2xl font-bold mb-3 mt-2">LED手电筒核心技术全解析：从亮度到能效</h2>
+                                <p class="text-neutral-dark/70 mb-4">
+                                    本文详细介绍了LED手电筒的核心技术，包括LED芯片类型、驱动电路设计、光学系统优化和散热解决方案。了解这些技术将帮助您选择最适合需求的手电筒产品，并充分发挥其性能优势。
+                                </p>
+                                <div class="flex items-center text-sm text-neutral-dark/60 mb-4">
+                                    <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2023-09-15</span>
+                                    <span><i class="fa fa-eye mr-1"></i> 2,345</span>
+                                </div>
+                                <a href="knowledge/led-flashlight-technology.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                                    阅读全文 <i class="fa fa-long-arrow-right ml-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Articles -->
+                <h2 class="text-2xl font-bold mb-6">最新知识文章</h2>
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Article 1 -->
+                    <div class="knowledge-card">
+                        <div class="p-6">
+                            <span class="category-tag bg-primary/10 text-primary">电池知识</span>
+                            <h2 class="text-xl font-bold mb-3 mt-2">锂电池保养完全指南：延长使用寿命的10个技巧</h2>
+                            <p class="text-neutral-dark/70 mb-4 line-clamp-3">
+                                锂电池是现代手电筒的核心动力来源，正确的保养方法可以显著延长其使用寿命。本文分享了10个实用的锂电池保养技巧，包括充电习惯、存储条件、使用环境等方面的专业建议。
+                            </p>
+                            <div class="flex items-center text-sm text-neutral-dark/60 mb-4">
+                                <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2023-10-10</span>
+                                <span><i class="fa fa-eye mr-1"></i> 1,876</span>
+                            </div>
+                            <a href="knowledge/lithium-battery-maintenance.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                                阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="knowledge-card">
+                        <div class="p-6">
+                            <span class="category-tag bg-primary/10 text-primary">使用技巧</span>
+                            <h2 class="text-xl font-bold mb-3 mt-2">户外手电筒的5种实用战术技巧：从信号到自卫</h2>
+                            <p class="text-neutral-dark/70 mb-4 line-clamp-3">
+                                手电筒不仅是照明工具，在户外环境下还能发挥多种战术功能。本文介绍了5种实用的户外手电筒战术技巧，包括紧急信号发送、野生动物驱赶、临时防身、物品检查和简易维修等场景应用。
+                            </p>
+                            <div class="flex items-center text-sm text-neutral-dark/60 mb-4">
+                                <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2023-09-28</span>
+                                <span><i class="fa fa-eye mr-1"></i> 1,542</span>
+                            </div>
+                            <a href="knowledge/flashlight-tactical-skills.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                                阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="knowledge-card">
+                        <div class="p-6">
+                            <span class="category-tag bg-primary/10 text-primary">产品原理</span>
+                            <h2 class="text-xl font-bold mb-3 mt-2">理解手电筒防水等级：IPX标准完全解读</h2>
+                            <p class="text-neutral-dark/70 mb-4 line-clamp-3">
+                                防水性能是手电筒的重要指标，但IPX等级标识常常让人困惑。本文详细解读了IPX防水等级标准，从IPX0到IPX8的具体含义，以及不同等级在实际使用场景中的意义和局限性。
+                            </p>
+                            <div class="flex items-center text-sm text-neutral-dark/60 mb-4">
+                                <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2023-09-18</span>
+                                <span><i class="fa fa-eye mr-1"></i> 1,298</span>
+                            </div>
+                            <a href="knowledge/flashlight-waterproof-rating.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                                阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="knowledge-card">
+                        <div class="p-6">
+                            <span class="category-tag bg-primary/10 text-primary">故障排除</span>
+                            <h2 class="text-xl font-bold mb-3 mt-2">手电筒常见故障排除指南：从无法开机到亮度异常</h2>
+                            <p class="text-neutral-dark/70 mb-4 line-clamp-3">
+                                遇到手电筒无法开机、亮度异常或闪烁等问题怎么办？本文提供了全面的故障排除指南，通过简单的步骤诊断和解决常见问题，帮助您避免不必要的维修或更换成本。
+                            </p>
+                            <div class="flex items-center text-sm text-neutral-dark/60 mb-4">
+                                <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2023-09-05</span>
+                                <span><i class="fa fa-eye mr-1"></i> 2,013</span>
+                            </div>
+                            <a href="knowledge/flashlight-troubleshooting.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                                阅读全文 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Knowledge Categories Section -->
+                <div class="grid md:grid-cols-3 gap-6 mb-16">
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <div class="text-primary text-3xl mb-4"><i class="fa fa-book"></i></div>
+                        <h3 class="text-lg font-bold mb-3">技术手册</h3>
+                        <p class="text-neutral-dark/70 text-sm mb-4">
+                            详细的产品技术规格、参数说明和功能介绍，帮助您全面了解产品性能和特点。
+                        </p>
+                        <a href="technical-manuals.html" class="text-primary text-sm font-medium hover:underline inline-flex items-center">
+                            浏览技术手册 <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <div class="text-primary text-3xl mb-4"><i class="fa fa-play-circle"></i></div>
+                        <h3 class="text-lg font-bold mb-3">视频教程</h3>
+                        <p class="text-neutral-dark/70 text-sm mb-4">
+                            直观的视频演示，包括产品使用方法、功能操作和维护保养的详细步骤指导。
+                        </p>
+                        <a href="video-tutorials.html" class="text-primary text-sm font-medium hover:underline inline-flex items-center">
+                            观看视频教程 <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <div class="text-primary text-3xl mb-4"><i class="fa fa-question-circle"></i></div>
+                        <h3 class="text-lg font-bold mb-3">常见问题</h3>
+                        <p class="text-neutral-dark/70 text-sm mb-4">
+                            收集用户最常遇到的问题和解答，帮助您快速解决使用过程中的疑问和困难。
+                        </p>
+                        <a href="knowledge-faq.html" class="text-primary text-sm font-medium hover:underline inline-flex items-center">
+                            查看常见问题 <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Knowledge Subscription -->
+                <div class="bg-primary/10 rounded-2xl p-8 text-center">
+                    <h2 class="text-2xl font-bold mb-4">订阅产品知识更新</h2>
+                    <p class="text-neutral-dark/70 mb-6 max-w-2xl mx-auto">
+                        订阅我们的产品知识库更新，及时获取最新的产品技术文章、使用技巧和维护保养信息，让您的Superfire产品始终保持最佳状态。
+                    </p>
+                    <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                        <input type="email" placeholder="请输入您的邮箱地址" class="flex-grow px-4 py-3 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300">
+                        <button type="submit" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap">
+                            立即订阅
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Category Tag Toggle
+        document.querySelectorAll('.category-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                document.querySelectorAll('.category-tag').forEach(t => {
+                    t.classList.remove('bg-primary', 'text-white');
+                    t.classList.add('bg-neutral', 'text-neutral-dark/70');
+                });
+                this.classList.remove('bg-neutral', 'text-neutral-dark/70');
+                this.classList.add('bg-primary', 'text-white');
+                // In a real implementation, this would filter the articles
+            });
+        });
+
+        // Scroll Animation
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

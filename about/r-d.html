@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研发中心 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .feature-card {
+                @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../cs-aboutus.html" class="text-neutral-dark/70 hover:text-primary">关于Superfire</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">研发中心</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">研发中心</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        Superfire研发中心是公司技术创新的核心驱动力，拥有一支由光学、电子、结构等多领域专家组成的专业团队。我们致力于照明技术的前沿探索，每年将销售额的8%投入研发，持续推出引领行业的创新产品。
+                    </p>
+                </div>
+
+                <!-- R&D Team -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fa fa-users text-primary mr-3"></i>研发团队
+                    </h2>
+                    <div class="bg-neutral/30 rounded-xl p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h3 class="text-xl font-semibold mb-3">专业人才梯队</h3>
+                                <p class="text-neutral-dark/70 mb-4">研发团队由50余名专业工程师组成，其中博士3人，硕士12人，平均行业经验8年以上。核心成员来自华为、飞利浦等知名企业，拥有丰富的技术积累和创新能力。</p>
+                                <ul class="space-y-2 text-neutral-dark/70">
+                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>光学设计专家团队</li>
+                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>电子硬件研发团队</li>
+                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>结构设计与材料团队</li>
+                                    <li class="flex items-start"><i class="fa fa-check text-primary mt-1 mr-2"></i>软件与智能控制团队</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                                <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                                <div class="text-lg font-semibold mb-1">研发人员</div>
+                                <div class="text-neutral-dark/60">专业技术团队</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Capabilities -->
+                <div class="mb-16">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fa fa-flask text-primary mr-3"></i>技术实力
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="feature-card">
+                            <div class="text-3xl text-primary mb-4"><i class="fa fa-lightbulb-o"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">光学技术</h3>
+                            <p class="text-neutral-dark/70">自主研发的多曲面反光杯技术，实现光束精准控制，射程可达1000米以上。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="text-3xl text-primary mb-4"><i class="fa fa-microchip"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">智能控制</h3>
+                            <p class="text-neutral-dark/70">智能调光系统，支持APP远程控制，实现多场景照明模式切换。</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="text-3xl text-primary mb-4"><i class="fa fa-battery-full"></i></div>
+                            <h3 class="text-xl font-semibold mb-2">电池技术</h3>
+                            <p class="text-neutral-dark/70">研发高容量锂电池管理系统，提升续航能力30%，充电效率提高50%。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Patent Achievements -->
+                <div>
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fa fa-trophy text-primary mr-3"></i>专利成果
+                    </h2>
+                    <div class="bg-neutral/30 rounded-xl p-8">
+                        <div class="flex flex-col md:flex-row items-center justify-between mb-8">
+                            <div class="mb-6 md:mb-0">
+                                <h3 class="text-xl font-semibold mb-2">创新成果</h3>
+                                <p class="text-neutral-dark/70">截至2023年，公司累计获得授权专利32项，其中发明专利8项，实用新型专利15项，外观设计专利9项。</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                                <div class="text-4xl font-bold text-primary mb-2">32+</div>
+                                <div class="text-lg font-semibold mb-1">授权专利</div>
+                                <div class="text-neutral-dark/60">技术创新成果</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                                <div class="text-primary mr-3 mt-1"><i class="fa fa-file-text-o"></i></div>
+                                <div>
+                                    <div class="font-medium">一种高效散热的LED手电筒</div>
+                                    <div class="text-sm text-neutral-dark/60">发明专利 | 专利号：ZL202110XXXXXX.XX</div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                                <div class="text-primary mr-3 mt-1"><i class="fa fa-file-text-o"></i></div>
+                                <div>
+                                    <div class="font-medium">多模式智能调光控制系统</div>
+                                    <div class="text-sm text-neutral-dark/60">发明专利 | 专利号：ZL202210XXXXXX.XX</div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                                <div class="text-primary mr-3 mt-1"><i class="fa fa-file-text-o"></i></div>
+                                <div>
+                                    <div class="font-medium">防水防尘照明设备结构</div>
+                                    <div class="text-sm text-neutral-dark/60">实用新型专利 | 专利号：ZL202120XXXXXX.XX</div>
+                                </div>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm flex items-start">
+                                <div class="text-primary mr-3 mt-1"><i class="fa fa-file-text-o"></i></div>
+                                <div>
+                                    <div class="font-medium">便携式多功能照明工具</div>
+                                    <div class="text-sm text-neutral-dark/60">外观设计专利 | 专利号：ZL202230XXXXXX.XX</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // 滚动动画
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>

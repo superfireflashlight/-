@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术支持 - Superfire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .tech-card {
+                @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <!-- Header -->
+    <script>
+        fetch('../header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-neutral/50 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm" aria-label="Breadcrumb">
+                <ol class="flex flex-wrap items-center">
+                    <li><a href="../index.html" class="text-neutral-dark/70 hover:text-primary">首页</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li><a href="../support.html" class="text-neutral-dark/70 hover:text-primary">支持与服务</a></li>
+                    <li class="mx-2"><i class="fa fa-angle-right text-neutral-dark/40"></i></li>
+                    <li aria-current="page" class="text-primary font-medium">技术支持</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-6">技术支持</h1>
+                <div class="prose prose-lg max-w-none mb-12">
+                    <p class="text-lg text-neutral-dark/80 mb-6">
+                        我们提供全面的技术支持服务，包括产品文档、驱动下载、常见问题解答以及专业技术团队的在线支持，助您快速解决使用过程中遇到的问题。
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <!-- Technical Documents -->
+                    <div class="tech-card">
+                        <div class="text-primary text-4xl mb-4"><i class="fa fa-file-text-o"></i></div>
+                        <h2 class="text-xl font-bold mb-3">技术文档</h2>
+                        <p class="text-neutral-dark/70 mb-4">
+                            下载最新的产品手册、规格参数表和使用指南，帮助您全面了解产品功能和操作方法。
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>
+                                <a href="#" class="text-neutral-dark/80 hover:text-primary">产品手册与规格参数</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>
+                                <a href="#" class="text-neutral-dark/80 hover:text-primary">安装与操作指南</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>
+                                <a href="#" class="text-neutral-dark/80 hover:text-primary">维护保养手册</a>
+                            </li>
+                        </ul>
+                        <a href="technical-documents.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                            查看全部文档
+                        </a>
+                    </div>
+
+                    <!-- Driver Downloads -->
+                    <div class="tech-card">
+                        <div class="text-primary text-4xl mb-4"><i class="fa fa-download"></i></div>
+                        <h2 class="text-xl font-bold mb-3">驱动下载</h2>
+                        <p class="text-neutral-dark/70 mb-4">
+                            获取最新的设备驱动程序和固件更新，确保您的产品始终保持最佳性能。
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>
+                                <a href="#" class="text-neutral-dark/80 hover:text-primary">智能控制软件</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>
+                                <a href="#" class="text-neutral-dark/80 hover:text-primary">固件更新程序</a>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fa fa-check-circle text-primary mr-2"></i>
+                                <a href="#" class="text-neutral-dark/80 hover:text-primary">移动应用程序</a>
+                            </li>
+                        </ul>
+                        <a href="driver-downloads.html" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                            下载中心
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="bg-neutral/50 rounded-2xl p-8 mb-12">
+                    <h2 class="text-2xl font-bold mb-6">常见问题解答</h2>
+                    <div class="space-y-6">
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex justify-between items-center text-left font-medium" onclick="toggleFaq(this)">
+                                <span>如何选择适合我的手电筒产品？</span>
+                                <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer hidden mt-3 text-neutral-dark/70">
+                                <p>选择手电筒时应考虑使用场景、亮度需求、续航时间和特殊功能。户外探险建议选择高亮度、长续航的型号；工业检测则需要注重耐用性和防爆功能。您可以参考我们的产品选型指南或联系客服获取专业建议。</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex justify-between items-center text-left font-medium" onclick="toggleFaq(this)">
+                                <span>产品保修期是多久？如何申请保修服务？</span>
+                                <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer hidden mt-3 text-neutral-dark/70">
+                                <p>Superfire产品保修期为2年，部分核心部件享受5年保修。申请保修服务请登录官网售后服务页面，填写产品信息和故障描述，或直接联系客服热线400-XXX-XXXX。保修时请提供购买凭证和产品序列号。</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question w-full flex justify-between items-center text-left font-medium" onclick="toggleFaq(this)">
+                                <span>如何保养和维护手电筒以延长使用寿命？</span>
+                                <i class="fa fa-plus text-primary transition-transform duration-300"></i>
+                            </button>
+                            <div class="faq-answer hidden mt-3 text-neutral-dark/70">
+                                <p>定期清洁手电筒外壳和镜片，保持螺纹处清洁并涂抹专用润滑脂；避免长时间满功率使用导致过热；不使用时取出电池存放于阴凉干燥处；避免摔落和剧烈撞击。详细保养方法请参考产品维护手册。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="faq.html" class="text-primary font-medium hover:underline">查看更多常见问题 <i class="fa fa-angle-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Technical Support Form -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+                    <h2 class="text-2xl font-bold mb-6">联系技术支持</h2>
+                    <form class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-neutral-dark/80 mb-1">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300" placeholder="请输入您的姓名">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-neutral-dark/80 mb-1">邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300" placeholder="请输入您的邮箱地址">
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="product" class="block text-sm font-medium text-neutral-dark/80 mb-1">产品型号</label>
+                                <select id="product" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300">
+                                    <option value="">请选择产品型号</option>
+                                    <option value="sf-1000">SF-1000 强光手电筒</option>
+                                    <option value="sf-2000">SF-2000 战术手电筒</option>
+                                    <option value="sf-3000">SF-3000 防爆手电筒</option>
+                                    <option value="other">其他产品</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="serial" class="block text-sm font-medium text-neutral-dark/80 mb-1">产品序列号</label>
+                                <input type="text" id="serial" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300" placeholder="请输入产品序列号（可选）">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="issue" class="block text-sm font-medium text-neutral-dark/80 mb-1">问题描述</label>
+                            <textarea id="issue" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300" placeholder="请详细描述您遇到的问题或需求"></textarea>
+                        </div>
+                        <div class="flex items-start">
+                            <input type="checkbox" id="privacy" class="mt-1 mr-2">
+                            <label for="privacy" class="text-sm text-neutral-dark/70">
+                                我同意Superfire根据<a href="../privacy-policy.html" class="text-primary hover:underline">隐私政策</a>处理我的个人信息，用于提供技术支持服务。
+                            </label>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center">
+                            <i class="fa fa-paper-plane mr-2"></i> 提交技术支持请求
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <script>
+        fetch('../footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+    </script>
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            answer.classList.toggle('hidden');
+            icon.classList.toggle('fa-plus');
+            icon.classList.toggle('fa-minus');
+            icon.classList.toggle('rotate-45');
+        }
+
+        // Scroll Animation
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'shadow-md');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
