@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERFIRE TN02 专业手电筒 - 超长续航 多模式照明 | 官方正品</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#fd8c05',
+                        secondary: '#000000',
+                        accent: '#ffaa4d',
+                        neutral: '#F1FAEE',
+                        'neutral-dark': '#1D3557',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .btn-primary {
+                @apply bg-gradient-to-r from-primary to-accent text-white px-6 py-3 rounded-md font-medium hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+            }
+            .btn-secondary {
+                @apply bg-white text-primary border border-primary px-6 py-3 rounded-md font-medium hover:bg-primary/5 transition-colors duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-dark">
+    <script>
+      fetch('/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
+
+    <main class="product-detail container mx-auto px-4 py-12">
+        <div class="breadcrumb mb-4 text-sm text-gray-500">
+          <a href="index.html" class="hover:text-primary">首页</a> &gt; 
+          <a href="products.html" class="hover:text-primary">手电筒</a> &gt; 
+          <span class="text-primary">TN02 专业手电筒</span>
+        </div>
+        <div class="banner bg-primary/10 text-primary p-4 rounded-lg mb-8 text-center">
+          <h2 class="text-xl font-bold">专业手电筒系列 | 超长续航照明方案</h2>
+        </div>
+        <!-- 核心信息区 -->
+        <section class="product-core flex flex-col lg:flex-row gap-8 mb-16">
+            <div class="product-images lg:w-1/2 bg-white rounded-xl shadow-md p-4">
+                <img src="templates/web/images/tn02-main.jpg" alt="SUPERFIRE TN02 Flashlight" class="w-full h-auto rounded-lg">
+                <!-- 缩略图和视频播放按钮 -->
+            </div>
+            <div class="product-info lg:w-1/2 bg-white rounded-xl shadow-md p-6">
+                <h1 class="text-2xl font-bold mb-4">SUPERFIRE TN02 Flashlight</h1>
+                <div class="product-tags flex gap-2 mb-6">
+                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">800LM</span>
+                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">300M</span>
+                    <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">12H</span>
+                </div>
+                <div class="product-pricing mb-8">
+                    <p class="retail-price text-2xl font-bold text-neutral-dark mb-2">建议零售价: ¥299</p>
+                    <p class="wholesale-price text-neutral-dark/70">批发价: <span class="login-required text-primary font-medium">登录查看</span></p>
+                </div>
+                <div class="product-actions flex flex-col sm:flex-row gap-4">
+                    <button class="btn-primary flex-1">加入询价单</button>
+                    <button class="btn-secondary flex-1">加入购物车</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品详细描述 -->
+        <section class="product-description mt-16 bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-3xl font-bold mb-6">产品概述</h2>
+            <div class="prose max-w-none text-neutral-dark/90">
+                <p class="mb-4 text-lg">SUPERFIRE TN02 是一款专为专业人士设计的高性能手电筒，融合了先进的照明技术与耐用的工业设计。采用最新的LED芯片，提供高达800流明的亮度输出和300米的射程，同时保持12小时的超长续航能力。</p>
+                <p>无论是工业巡检、户外探险还是应急救援，TN02都能提供可靠的照明解决方案。其航空级铝合金外壳不仅轻便耐用，还具备IPX6防水等级，可在各种恶劣环境下正常工作。人体工学设计确保长时间使用舒适不疲劳，多种照明模式满足不同场景需求。</p>
+            </div>
+        </section>
+
+        <!-- 产品特性 -->
+        <section class="product-features mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">核心特性</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-bolt text-primary text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">超高亮度</h3>
+                    <p>800流明亮度输出，采用CREE XML-T6 LED芯片，使用寿命长达50000小时。</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-compass text-primary text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">超远射程</h3>
+                    <p>特殊光学设计，光束射程可达300米，满足远距离照明需求。</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-clock-o text-primary text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">长效续航</h3>
+                    <p>18650可充电锂电池，低亮模式下可持续照明12小时。</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-shield text-primary text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">坚固耐用</h3>
+                    <p>航空级铝合金外壳，IPX6防水等级，2米防摔设计。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 规格参数表 -->
+        <section class="product-specs mt-16 bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-3xl font-bold mb-6">技术规格</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr>
+                            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">参数类别</th>
+                            <th class="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">详细规格</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-dark">光学参数</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">LED类型</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">CREE XML-T6</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">最大亮度</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">800流明</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">最大射程</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">300米</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">照明模式</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">强光/中光/弱光/爆闪/SOS</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-dark">电池信息</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">电池类型</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">18650可充电锂电池 (3.7V/2600mAh)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">续航时间</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">强光: 2小时 / 中光: 5小时 / 弱光: 12小时</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">充电时间</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">约4小时 (USB充电)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-dark">物理特性</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">材质</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">航空级铝合金</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">尺寸</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">150mm × 45mm (长度×头部直径)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">重量</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">220g (不含电池)</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-neutral-dark">环境参数</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">防水等级</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">IPX6</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">防摔高度</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2米</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">工作温度</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-20°C ~ 60°C</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 应用场景专区 -->
+        <section class="product-scenarios mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">应用场景</h2>
+            <div class="scenario-cards grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="scenario-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/tn02-industry.jpg" alt="工业作业" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">工业作业</h3>
+                        <p class="text-gray-600">适合电力巡检、设备维修等工业场景，强光模式可清晰照亮设备细节，IPX6防水设计适应各种工作环境。</p>
+                    </div>
+                </div>
+                <div class="scenario-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/tn02-outdoor.jpg" alt="户外探险" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">户外探险</h3>
+                        <p class="text-gray-600">300米超远射程，12小时长效续航，是露营、徒步、登山等户外活动的理想照明工具。</p>
+                    </div>
+                </div>
+                <div class="scenario-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/tn02-emergency.jpg" alt="应急救援" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">应急救援</h3>
+                        <p class="text-gray-600">爆闪和SOS模式可在紧急情况下发出求救信号，坚固耐用的设计确保在恶劣环境下可靠工作。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 用户评价 -->
+        <section class="product-reviews mt-16 bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-3xl font-bold mb-8">用户评价</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="review-card border border-gray-100 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-500">5.0</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"亮度非常惊人，300米射程名副其实。作为电力巡检员，这款手电筒帮我解决了夜间工作的照明问题，电池续航也很满意。"</p>
+                    <div class="flex items-center">
+                        <img src="templates/web/images/user-avatar1.jpg" alt="用户头像" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-medium text-neutral-dark">张先生</p>
+                            <p class="text-sm text-gray-500">电力工程师</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card border border-gray-100 rounded-lg p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-500">4.5</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">"上周露营带了这款手电筒，亮度和续航都超出预期。防水性能也很好，下雨时照常使用没有问题。推荐给所有户外爱好者！"</p>
+                    <div class="flex items-center">
+                        <img src="templates/web/images/user-avatar2.jpg" alt="用户头像" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-medium text-neutral-dark">李女士</p>
+                            <p class="text-sm text-gray-500">户外爱好者</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="mt-6 text-primary hover:text-accent font-medium flex items-center">
+                查看全部评价 <i class="fa fa-chevron-right ml-1 text-sm"></i>
+            </button>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="product-faq mt-16 bg-neutral/50 p-8 rounded-xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">常见问题</h2>
+            <div class="space-y-4">
+                <div class="faq-item bg-white p-4 rounded-lg shadow-sm">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>TN02手电筒支持哪些充电方式？</span>
+                        <i class="fa fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-neutral-dark/80">
+                        支持USB直充，包装内包含USB充电线。电池采用标准18650规格，也可更换备用电池延长使用时间。
+                    </div>
+                </div>
+                <div class="faq-item bg-white p-4 rounded-lg shadow-sm">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>防水等级IPX6是什么概念？</span>
+                        <i class="fa fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-neutral-dark/80">
+                        IPX6等级表示产品可承受强烈喷水（如海浪或高压水枪），但不能在水下使用。适合雨天、潮湿环境或意外溅水情况。
+                    </div>
+                </div>
+                <div class="faq-item bg-white p-4 rounded-lg shadow-sm">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>如何切换不同的照明模式？</span>
+                        <i class="fa fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-neutral-dark/80">
+                        只需按下尾部开关即可循环切换照明模式：强光→中光→弱光→爆闪→SOS。长按开关2秒可直接关闭手电筒。
+                    </div>
+                </div>
+                <div class="faq-item bg-white p-4 rounded-lg shadow-sm">
+                    <button class="faq-question flex justify-between items-center w-full text-left font-medium">
+                        <span>产品保修期是多久？</span>
+                        <i class="fa fa-chevron-down text-primary"></i>
+                    </button>
+                    <div class="faq-answer mt-2 text-neutral-dark/80">
+                        SUPERFIRE产品提供2年官方保修服务，人为损坏除外。保修期内可享受免费维修或更换服务。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关产品推荐 -->
+        <section class="related-products mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">相关产品推荐</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="related-product-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/tf01-main.jpg" alt="SUPERFIRE TF01" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">SUPERFIRE TF01</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">¥359</span>
+                            <a href="tf01-flashlight.html" class="text-sm text-primary hover:text-accent">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-product-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/accessory-battery.jpg" alt="18650电池套装" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">18650电池套装</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">¥89</span>
+                            <a href="new-accessories.html" class="text-sm text-primary hover:text-accent">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-product-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/accessory-charger.jpg" alt="多功能充电器" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">多功能充电器</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">¥69</span>
+                            <a href="new-accessories.html" class="text-sm text-primary hover:text-accent">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="related-product-card bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <img src="templates/web/images/headlamp-h10.jpg" alt="SUPERFIRE H10头灯" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">SUPERFIRE H10头灯</h3>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-bold">¥279</span>
+                            <a href="new-headlamp.html" class="text-sm text-primary hover:text-accent">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 认证展示 -->
+        <section class="product-certifications">
+            <img src="templates/web/images/iso9001.png" alt="ISO9001认证">
+            <img src="templates/web/images/ce.png" alt="CE认证">
+            <!-- 更多认证 -->
+        </section>
+    </main>
+
+    <script src="footer.html"></script>
+</body>
+</html>
