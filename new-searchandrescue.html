@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search & Rescue Lights | Superfire</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="product-category-page">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> > <a href="/cs-products.html">Products</a> > Search & Rescue Lights
+        </div>
+
+        <h1>Search & Rescue Lights</h1>
+        <p>High-performance lighting equipment for emergency response, search operations, and rescue missions.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="L20-searchlight.html">
+                    <img src="/upfiles/202401/05/l20-searchlight.jpg" alt="SUPERFIRE L20 Searchlight">
+                    <h3>SUPERFIRE L20 LED Searchlight</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Lumens"> 5000LM</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Range"> 1000M</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_08.png" alt="Runtime"> 10H</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="YJ01-emergency.html">
+                    <img src="/upfiles/202401/05/yj01-emergency.jpg" alt="SUPERFIRE YJ01 Emergency Flashlight">
+                    <h3>SUPERFIRE YJ01 Multifunctional Emergency Flashlight</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Lumens"> 300LM</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Range"> 200M</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_08.png" alt="Runtime"> 20H</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Load header
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>

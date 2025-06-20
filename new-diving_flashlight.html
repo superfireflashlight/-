@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diving Flashlights | Superfire</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="product-category-page">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> > <a href="/cs-products.html">Products</a> > Diving Flashlights
+        </div>
+
+        <h1>Diving Flashlights</h1>
+        <p>Waterproof diving flashlights for recreational, scuba, and commercial diving applications.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="D3-diving-flashlight.html">
+                    <img src="/upfiles/202401/05/d3-diving-flashlight.jpg" alt="SUPERFIRE D3 Diving Flashlight">
+                    <h3>SUPERFIRE D3 Diving Flashlight</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Lumens"> 2000LM</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Depth Rating"> 100M</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_08.png" alt="Runtime"> 4H</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Load header
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>

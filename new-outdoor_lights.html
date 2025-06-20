@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outdoor Lights | Superfire</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="product-category-page">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> > <a href="/cs-products.html">Products</a> > Outdoor Lights
+        </div>
+
+        <h1>Outdoor Lights</h1>
+        <p>Reliable lighting solutions for camping, hiking, cycling, and other outdoor activities.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="BM01-bicycle-light.html">
+                    <img src="/upfiles/202401/05/bm01-bicycle-light.jpg" alt="SUPERFIRE BM01 Bicycle Light">
+                    <h3>SUPERFIRE BM01 Bicycle Light</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Lumens"> 800LM</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Range"> 300M</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_08.png" alt="Runtime"> 6H</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="T60-camping-light.html">
+                    <img src="/upfiles/202401/05/t60-camping-light.jpg" alt="SUPERFIRE T60 Camping Light">
+                    <h3>SUPERFIRE T60 Camping Light</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Lumens"> 500LM</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Range"> 50M</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_08.png" alt="Runtime"> 15H</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Load header
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>
