@@ -42,7 +42,7 @@
 <body class="bg-white text-neutral-dark">
     <!-- Header -->
     <script>
-        fetch('../header.html')
+        fetch('/header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header-placeholder').innerHTML = data);
     </script>
@@ -138,7 +138,7 @@
                                 <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded">发明专利</span>
                             </div>
                             <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202110XXXXXX.XX</div>
-                            <p class="mt-3 text-neutral-dark/70">本发明公开了一种高效散热的LED手电筒，通过创新的散热结构设计，将LED光源产生的热量快速导出，提高了手电筒的使用寿命和稳定性。</p>
+                            <p class="mt-3 text-neutral-dark/70">该方法公开了一种高效散热的LED手电筒，通过创新的散热结构设计，将LED光源产生的热量快速导出，提高了手电筒的使用寿命和稳定性。</p>
                         </div>
 
                         <div class="patent-item">
@@ -156,49 +156,12 @@
                                 <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded">实用新型专利</span>
                             </div>
                             <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202120XXXXXX.XX</div>
-                            <p class="mt-3 text-neutral-dark/70">本实用新型涉及一种防水防尘照明设备结构，通过多重密封设计，达到IP68防护等级，可在恶劣环境下可靠工作。</p>
+                            <p class="mt-3 text-neutral-dark/70">该方法公开了一种高效散热的LED手电筒，通过创新的散热结构设计，将LED光源产生的热量快速导出，提高了手电筒的使用寿命和稳定性。</p>
                         </div>
-
-                        <div class="patent-item">
-                            <div class="flex justify-between items-start">
-                                <h3 class="text-lg font-semibold">便携式多功能照明工具</h3>
-                                <span class="bg-secondary/10 text-secondary text-xs px-2 py-1 rounded">外观设计专利</span>
-                            </div>
-                            <div class="mt-2 text-sm text-neutral-dark/60">专利号：ZL202230XXXXXX.XX</div>
-                            <p class="mt-3 text-neutral-dark/70">本外观设计产品用于户外照明，其设计简约时尚，握持舒适，功能多样，适合多种户外场景使用。</p>
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-8">
-                        <button class="btn-secondary">
-                            查看全部专利 <i class="fa fa-arrow-right ml-2"></i>
-                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <script>
-        fetch('../footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-    </script>
-    <div id="footer-placeholder"></div>
-
-    <script>
-        // 滚动动画
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'shadow-md');
-                header.classList.remove('py-4');
-            } else {
-                header.classList.add('py-4');
-                header.classList.remove('py-2', 'shadow-md');
-            }
-        });
-    </script>
 </body>
 </html>

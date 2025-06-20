@@ -43,64 +43,12 @@
 </head>
 <body class="font-sans text-gray-700-dark bg-white">
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-20 top-0 left-0">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex-shrink-0 flex items-center">
-                        <img src="https://picsum.photos/200/80?random=1" alt="Superfire Logo" class="h-10">
-                    </a>
-                    <div class="hidden md:ml-10 md:flex md:space-x-8">
-                        <a href="index.html" class="font-medium hover:text-accent transition-colors">Home</a>
-                        <div class="relative group">
-                            <a href="products.html" class="font-medium hover:text-accent transition-colors flex items-center">
-                                Products
-                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
-                            </a>
-                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
-                                <div class="py-1">
-                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">All Products</a>
-                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Flashlights</a>
-                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Headlamps</a>
-                                    <a href="products.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Lanterns</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="relative group">
-                            <a href="#" class="font-medium text-accent border-b-2 border-accent pb-1 flex items-center">
-                                B2B Solutions
-                                <i class="fa fa-chevron-down ml-1 text-xs"></i>
-                            </a>
-                            <div class="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-right">
-                                <div class="py-1">
-                                    <a href="oem-odm.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">OEM/ODM Services</a>
-                                    <a href="wholesale.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Wholesale</a>
-                                    <a href="enterprise-solutions.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Enterprise Solutions</a>
-                                    <a href="promotional-gifts.html" class="block px-4 py-2 text-sm hover:bg-neutral-dark hover:text-white">Promotional Gifts</a>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="#" class="font-medium hover:text-accent transition-colors">Capabilities</a>
-                        <a href="#" class="font-medium hover:text-accent transition-colors">About Us</a>
-                        <a href="#" class="font-medium hover:text-accent transition-colors">Contact</a>
-                    </div>
-                </div>
-                <div class="flex items-center">
-                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Login</a>
-                    <a href="#" class="hidden md:block text-sm hover:text-accent transition-colors">Register</a>
-                    <div class="relative">
-                        <a href="#" class="text-lg hover:text-accent transition-colors">
-                            <i class="fa fa-shopping-cart"></i>
-                            <span class="absolute -top-2 -right-2 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
-                        </a>
-                    </div>
-                    <button class="md:hidden text-lg">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <script>
+      fetch('/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="pt-24 pb-16 bg-gradient-to-r from-primary to-accent text-white">
