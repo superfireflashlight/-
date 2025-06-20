@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories | Superfire</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="product-category-page">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> > <a href="/cs-products.html">Products</a> > Accessories
+        </div>
+
+        <h1>Accessories</h1>
+        <p>Essential accessories including batteries, chargers, and mounts for your lighting equipment.</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <a href="AB5-battery.html">
+                    <img src="/upfiles/202401/05/ab5-battery.jpg" alt="SUPERFIRE AB5 Battery">
+                    <h3>SUPERFIRE AB5 18650 Battery</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Capacity"> 3.7V 3000mAh</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Type"> Rechargeable</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <a href="AC46-charger.html">
+                    <img src="/upfiles/202401/05/ac46-charger.jpg" alt="SUPERFIRE AC46 Charger">
+                    <h3>SUPERFIRE AC46 USB Charger</h3>
+                    <div class="product-specs">
+                        <div class="spec"><img src="/templates/web/images/pro_icon_03.png" alt="Ports"> 4 Ports</div>
+                        <div class="spec"><img src="/templates/web/images/pro_icon_06.png" alt="Compatibility"> 18650/26650</div>
+                    </div>
+                </a>
+                <div class="product-actions">
+                    <a href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=466205&groupid=12980" class="contact-btn">Contact US</a>
+                    <button class="inquiry-btn"><img src="/templates/web/images/pro_icon_14.png" alt="Inquiry"> Inquiry</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Load header
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>
