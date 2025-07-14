@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERFIRE HL08 - High-Performance Rechargeable Headlamp</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .key-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Icon Features Section */
+        .icon-features {
+            background: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: #2d2d2d;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .icon-feature {
+            display: flex;
+            align-items: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .icon-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .icon-feature-icon {
+            font-size: 2.5rem;
+            margin-right: 20px;
+            color: #ff6b35;
+            min-width: 60px;
+        }
+
+        .icon-feature-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2d2d2d;
+        }
+
+        .icon-feature-content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Key Visuals Section */
+        .key-visuals {
+            background: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .visuals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .visual-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .visual-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(45deg, #ddd 25%, transparent 25%), 
+                        linear-gradient(-45deg, #ddd 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #ddd 75%), 
+                        linear-gradient(-45deg, transparent 75%, #ddd 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .visual-content {
+            padding: 25px;
+        }
+
+        .visual-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2d2d2d;
+        }
+
+        .visual-content p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Specifications Table */
+        .specifications {
+            background: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .spec-table th {
+            background: #2d2d2d;
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .spec-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .spec-highlight {
+            background: #fff3cd;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        /* Usage Guide */
+        .usage-guide {
+            background: #f8f9fa;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .usage-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .usage-step {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #ff6b35;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 0 auto 20px;
+        }
+
+        .usage-step h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #2d2d2d;
+        }
+
+        .usage-step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Package Contents */
+        .package-contents {
+            background: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .package-item {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .package-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .package-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ff6b35;
+        }
+
+        .package-name {
+            font-weight: 600;
+            color: #2d2d2d;
+            margin-bottom: 5px;
+        }
+
+        .package-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background: white;
+            color: #ff6b35;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-button:hover {
+            background: #2d2d2d;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #ff6b35;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .icon-feature {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .icon-feature-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>SUPERFIRE HL08</h1>
+            <p class="hero-subtitle">Professional High-Performance Rechargeable Headlamp</p>
+            
+            <div class="key-features">
+                <div class="feature-card">
+                    <span class="feature-icon">💡</span>
+                    <div class="feature-title">1900 Lumens</div>
+                    <div class="feature-desc">Ultra-bright LED</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <div class="feature-title">350m Range</div>
+                    <div class="feature-desc">Long-distance beam</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔋</span>
+                    <div class="feature-title">Type-C Charging</div>
+                    <div class="feature-desc">Fast & convenient</div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🛡️</span>
+                    <div class="feature-title">IP32 Protection</div>
+                    <div class="feature-desc">Weather resistant</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Icon Features Section -->
+    <div class="icon-features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="icon-feature">
+                    <div class="icon-feature-icon">💡</div>
+                    <div class="icon-feature-content">
+                        <h3>High-Power LED Technology</h3>
+                        <p>Advanced LED chip delivers maximum 1900 lumens output with 8000K color temperature for crystal clear visibility</p>
+                    </div>
+                </div>
+                
+                <div class="icon-feature">
+                    <div class="icon-feature-icon">🔍</div>
+                    <div class="icon-feature-content">
+                        <h3>Adjustable Focus System</h3>
+                        <p>Zoom in/out functionality allows you to switch between spot and flood beam patterns for different applications</p>
+                    </div>
+                </div>
+                
+                <div class="icon-feature">
+                    <div class="icon-feature-icon">⚡</div>
+                    <div class="icon-feature-content">
+                        <h3>Multiple Lighting Modes</h3>
+                        <p>5 versatile modes: Low, Medium, High, Strobe, and SOS for various situations and emergency use</p>
+                    </div>
+                </div>
+                
+                <div class="icon-feature">
+                    <div class="icon-feature-icon">🔄</div>
+                    <div class="icon-feature-content">
+                        <h3>90° Tilt Mechanism</h3>
+                        <p>Adjustable head allows precise beam direction control for hands-free operation in any position</p>
+                    </div>
+                </div>
+                
+                <div class="icon-feature">
+                    <div class="icon-feature-icon">🔋</div>
+                    <div class="icon-feature-content">
+                        <h3>Dual 18650 Battery System</h3>
+                        <p>2x 2000mAh Li-ion batteries provide 4+ hours runtime with Type-C fast charging (5.5h full charge)</p>
+                    </div>
+                </div>
+                
+                <div class="icon-feature">
+                    <div class="icon-feature-icon">🛡️</div>
+                    <div class="icon-feature-content">
+                        <h3>Durable Construction</h3>
+                        <p>Aluminum alloy + ABS housing with IP32 water resistance and 1m impact resistance for reliable performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Visuals Section -->
+    <div class="key-visuals">
+        <div class="container">
+            <h2 class="section-title">Visual Details</h2>
+            <div class="visuals-grid">
+                <div class="visual-card">
+                    <div class="visual-image">Focus Adjustment Demo</div>
+                    <div class="visual-content">
+                        <h3>Zoom Focus System</h3>
+                        <p>Demonstrates the telescopic focus adjustment from wide flood beam to concentrated spot beam, showing the mechanical precision of the zoom mechanism.</p>
+                    </div>
+                </div>
+                
+                <div class="visual-card">
+                    <div class="visual-image">Exploded Structure View</div>
+                    <div class="visual-content">
+                        <h3>Internal Components</h3>
+                        <p>Detailed breakdown showing LED module, battery compartment, circuit protection, and aluminum heat dissipation system for quality assurance.</p>
+                    </div>
+                </div>
+                
+                <div class="visual-card">
+                    <div class="visual-image">350m Beam Distance</div>
+                    <div class="visual-content">
+                        <h3>Long-Range Performance</h3>
+                        <p>Real-world beam distance demonstration showing 350-meter reach capability in high mode for professional outdoor applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Specifications Table -->
+    <div class="specifications">
+        <div class="container">
+            <h2 class="section-title">Technical Specifications</h2>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Model</td>
+                        <td>HL08</td>
+                    </tr>
+                    <tr class="spec-highlight">
+                        <td>Max Output</td>
+                        <td>1900 Lumens</td>
+                    </tr>
+                    <tr class="spec-highlight">
+                        <td>Beam Distance</td>
+                        <td>350m (High mode)</td>
+                    </tr>
+                    <tr>
+                        <td>LED Type</td>
+                        <td>High-power LED</td>
+                    </tr>
+                    <tr>
+                        <td>Color Temperature</td>
+                        <td>8000K</td>
+                    </tr>
+                    <tr>
+                        <td>Battery</td>
+                        <td>2x 18650 Li-ion (2000mAh each)</td>
+                    </tr>
+                    <tr>
+                        <td>Runtime</td>
+                        <td>~4 Hours</td>
+                    </tr>
+                    <tr>
+                        <td>Charging Time</td>
+                        <td>~5.5 Hours</td>
+                    </tr>
+                    <tr>
+                        <td>Charging Port</td>
+                        <td>Type-C (5V/1A)</td>
+                    </tr>
+                    <tr>
+                        <td>Water Resistance</td>
+                        <td>IP32</td>
+                    </tr>
+                    <tr>
+                        <td>Impact Resistance</td>
+                        <td>1m</td>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>Aluminum alloy + ABS</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions</td>
+                        <td>φ41mm x L67mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>190g</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Usage Guide -->
+    <div class="usage-guide">
+        <div class="container">
+            <h2 class="section-title">How to Use</h2>
+            <div class="usage-steps">
+                <div class="usage-step">
+                    <div class="step-number">1</div>
+                    <h3>Power On/Off</h3>
+                    <p>Press and hold the switch button for 2 seconds to turn on/off the headlamp</p>
+                </div>
+                
+                <div class="usage-step">
+                    <div class="step-number">2</div>
+                    <h3>Mode Selection</h3>
+                    <p>Single click to cycle through 5 modes: Low → Medium → High → Strobe → SOS</p>
+                </div>
+                
+                <div class="usage-step">
+                    <div class="step-number">3</div>
+                    <h3>Focus Adjustment</h3>
+                    <p>Pull or push the lamp head to adjust between spot and flood beam patterns</p>
+                </div>
+                
+                <div class="usage-step">
+                    <div class="step-number">4</div>
+                    <h3>Tilt Adjustment</h3>
+                    <p>Rotate the lamp head up to 90° to direct the beam where you need it most</p>
+                </div>
+                
+                <div class="usage-step">
+                    <div class="step-number">5</div>
+                    <h3>Charging</h3>
+                    <p>Connect Type-C cable to charge. LED indicator shows charging status and battery level</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Package Contents -->
+    <div class="package-contents">
+        <div class="container">
+            <h2 class="section-title">Package Contents</h2>
+            <div class="package-grid">
+                <div class="package-item">
+                    <div class="package-icon">🔦</div>
+                    <div class="package-name">HL08 Headlamp</div>
+                    <div class="package-desc">Main unit</div>
+                </div>
+                
+                <div class="package-item">
+                    <div class="package-icon">🔋</div>
+                    <div class="package-name">18650 Batteries</div>
+                    <div class="package-desc">2x 2000mAh Li-ion</div>
+                </div>
+                
+                <div class="package-item">
+                    <div class="package-icon">🔌</div>
+                    <div class="package-name">Type-C Cable</div>
+                    <div class="package-desc">Charging cable</div>
+                </div>
+                
+                <div class="package-item">
+                    <div class="package-icon">📦</div>
+                    <div class="package-name">Gift Box</div>
+                    <div class="package-desc">Premium packaging</div>
+                </div>
+                
+                <div class="package-item">
+                    <div class="package-icon">📋</div>
+                    <div class="package-name">User Manual</div>
+                    <div class="package-desc">Instruction guide</div>
+                </div>
+                
+                <div class="package-item">
+                    <div class="package-icon">🏷️</div>
+                    <div class="package-name">Accessories</div>
+                    <div class="package-desc">Strap & labels</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="container">
+            <h2>Ready to Order?</h2>
+            <p>Contact our sales team for bulk pricing and customization options</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button">
+                    📧 Request Quote
+                </a>
+                <a href="#" class="cta-button cta-secondary">
+                    📱 Contact Sales
+                </a>
+                <a href="#" class="cta-button cta-secondary">
+                    📄 Download Specs
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add hover effects for interactive elements
+        document.querySelectorAll('.feature-card, .icon-feature, .visual-card, .package-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
